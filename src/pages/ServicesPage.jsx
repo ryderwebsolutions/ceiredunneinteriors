@@ -1,26 +1,32 @@
 import SectionHeading from "../components/SectionHeading";
 import { PrimaryButton } from "../components/Buttons";
+import Reveal from "../components/Reveal";
 import { services } from "../data/siteContent";
+
+const paletteImage = "/colour%20palette.jpeg";
+const textileImage = "/textiles.jpeg";
 
 function ServicesPage() {
   return (
     <div className="mx-auto max-w-7xl px-5 pb-20 pt-10 md:px-8 md:pt-14">
-      <SectionHeading
-        eyebrow="Services"
-        title="Practical interior support, tailored to your home"
-        intro="Every session is personal, collaborative, and shaped around real life in Irish homes."
-      />
+      <Reveal threshold={0.1}>
+        <SectionHeading
+          eyebrow="Services"
+          title="Practical interior support, tailored to your home"
+          intro="Every session is personal, collaborative, and shaped around real life in Irish homes."
+        />
+      </Reveal>
 
-      <div className="mt-10 grid gap-6 md:grid-cols-2">
+      <Reveal className="mt-10 grid gap-6 md:grid-cols-2" delay={130} duration={830}>
         {services.map((service) => (
-          <article key={service.title} className="soft-card rounded-3xl p-7 shadow-soft">
+          <article key={service.title} className="soft-card rounded-3xl border border-walnut/10 p-7 shadow-soft">
             <h3 className="text-3xl text-charcoal">{service.title}</h3>
             <p className="mt-3 text-charcoal/80">{service.detail}</p>
           </article>
         ))}
-      </div>
+      </Reveal>
 
-      <div className="mt-16 grid gap-8 rounded-[2rem] bg-gradient-to-r from-sage/45 via-white/80 to-lilac/40 p-8 md:grid-cols-2 md:p-12">
+      <Reveal className="mt-16 grid gap-8 rounded-[2rem] border border-walnut/10 bg-linen/45 p-8 md:grid-cols-2 md:p-12" delay={230} duration={880}>
         <div>
           <h2 className="text-4xl text-charcoal">What a consultation can include</h2>
           <ul className="mt-5 space-y-3 text-charcoal/80">
@@ -35,11 +41,15 @@ function ServicesPage() {
           </PrimaryButton>
         </div>
         <img
-          src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=1200&q=80"
-          alt="Design consultation in a cozy room"
-          className="photo-curve h-full min-h-[300px] w-full object-cover shadow-soft"
+          src={paletteImage}
+          alt="Consultation colour and material board"
+          className="photo-curve h-full min-h-[250px] w-full object-cover object-[52%_46%] shadow-soft md:min-h-[300px]"
         />
-      </div>
+      </Reveal>
+
+      <Reveal className="mt-10 overflow-hidden rounded-[2rem] border border-walnut/10" delay={320} duration={820}>
+        <img src={textileImage} alt="Textural styling references" className="h-64 w-full object-cover object-[50%_34%] md:h-96" />
+      </Reveal>
     </div>
   );
 }

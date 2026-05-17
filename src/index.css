@@ -3,13 +3,15 @@
 @tailwind utilities;
 
 :root {
-  --cream: #f7f2ec;
-  --lavender: #b499c8;
-  --lilac: #cab7d8;
-  --dusty: #8f759d;
-  --blush: #dfc0ca;
-  --sage: #a6b39a;
-  --charcoal: #40393f;
+  --cream: #f4efe7;
+  --linen: #e8dece;
+  --stone: #d6c8b7;
+  --taupe: #b5a694;
+  --sage: #7f8f7a;
+  --eucalyptus: #9aa792;
+  --walnut: #6c5040;
+  --roseclay: #c7a89e;
+  --charcoal: #3f3933;
 }
 
 html {
@@ -21,9 +23,10 @@ body {
   font-family: "DM Sans", "Segoe UI", sans-serif;
   color: var(--charcoal);
   background:
-    radial-gradient(circle at 8% 10%, rgba(202, 183, 216, 0.35), transparent 30%),
-    radial-gradient(circle at 90% 8%, rgba(223, 192, 202, 0.35), transparent 34%),
-    linear-gradient(180deg, #f9f5ef 0%, #f5f1eb 48%, #f7f2ec 100%);
+    radial-gradient(circle at 10% 8%, rgba(214, 200, 183, 0.4), transparent 34%),
+    radial-gradient(circle at 88% 5%, rgba(154, 167, 146, 0.22), transparent 28%),
+    linear-gradient(180deg, #f5f0e8 0%, #f1ebe1 45%, #efe7dc 100%);
+  line-height: 1.6;
 }
 
 h1,
@@ -39,7 +42,7 @@ h4 {
 }
 
 .soft-card {
-  background: rgba(255, 255, 255, 0.74);
+  background: rgba(248, 243, 236, 0.74);
   backdrop-filter: blur(4px);
 }
 
@@ -49,10 +52,49 @@ h4 {
 
 .photo-curve {
   border-radius: 24px;
+  border: 1px solid rgba(108, 80, 64, 0.08);
+}
+
+.editorial-panel {
+  background: linear-gradient(135deg, rgba(232, 222, 206, 0.72), rgba(245, 239, 230, 0.86));
+  border: 1px solid rgba(108, 80, 64, 0.1);
+}
+
+.texture-wash {
+  background: linear-gradient(150deg, rgba(154, 167, 146, 0.2), rgba(199, 168, 158, 0.12));
+}
+
+.reveal {
+  opacity: 0;
+  transform: translateY(var(--reveal-distance, 22px));
+  filter: saturate(92%);
+  transition:
+    opacity var(--reveal-duration, 860ms) ease,
+    transform var(--reveal-duration, 860ms) var(--reveal-easing, cubic-bezier(0.2, 0.7, 0.2, 1)),
+    filter var(--reveal-duration, 860ms) ease;
+  will-change: opacity, transform;
+}
+
+.reveal-visible {
+  opacity: 1;
+  transform: translateY(0);
+  filter: saturate(100%);
 }
 
 @media (max-width: 768px) {
   .photo-curve {
     border-radius: 18px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .reveal,
+  .reveal-visible,
+  .page-enter {
+    animation: none !important;
+    transition: none !important;
+    opacity: 1;
+    transform: none;
+    filter: none;
   }
 }

@@ -1,5 +1,9 @@
 import { useState } from "react";
 import SectionHeading from "../components/SectionHeading";
+import Reveal from "../components/Reveal";
+
+const kitchenAfterImage = "/KitchenAfter.jpeg";
+const textileImage = "/textiles.jpeg";
 
 function ContactPage() {
   const [status, setStatus] = useState({ type: "idle", message: "" });
@@ -53,14 +57,14 @@ function ContactPage() {
 
   return (
     <div className="mx-auto max-w-7xl px-5 pb-20 pt-10 md:px-8 md:pt-14">
-      <section className="grid gap-10 md:grid-cols-[1fr_1.1fr]">
+      <Reveal as="section" className="grid gap-10 md:grid-cols-[1fr_1.1fr]" threshold={0.1}>
         <div>
           <SectionHeading
             eyebrow="Contact"
             title="Book your interior consultation"
             intro="Share your room, goals, and style preferences. You will receive warm, practical guidance tailored to your home."
           />
-          <div className="mt-8 space-y-4 rounded-3xl bg-white/75 p-6 shadow-soft">
+          <div className="mt-8 space-y-4 rounded-3xl bg-cream/75 p-6 shadow-soft">
             <p className="text-charcoal/80">
               <span className="font-semibold text-charcoal">Email:</span> ceiredunneinteriors@gmail.com
             </p>
@@ -72,14 +76,14 @@ function ContactPage() {
             </p>
           </div>
           <img
-            src="https://images.unsplash.com/photo-1616046229478-9901c5536a45?auto=format&fit=crop&w=1200&q=80"
-            alt="Calm interior workspace"
-            className="photo-curve mt-8 h-72 w-full object-cover shadow-soft"
+            src={kitchenAfterImage}
+            alt="Completed kitchen transformation"
+            className="photo-curve mt-8 h-64 w-full object-cover object-[52%_45%] shadow-soft md:h-72"
           />
         </div>
 
         <form
-          className="rounded-[2rem] bg-gradient-to-br from-white/85 via-lilac/25 to-blush/25 p-8 shadow-soft"
+          className="rounded-[2rem] border border-walnut/10 bg-linen/45 p-8 shadow-soft"
           aria-label="Consultation inquiry form"
           onSubmit={handleSubmit}
         >
@@ -94,7 +98,7 @@ function ContactPage() {
               <input
                 type="text"
                 name="name"
-                className="mt-2 w-full rounded-xl border border-charcoal/15 bg-white/90 px-4 py-3 text-base outline-none transition focus:border-dusty"
+                className="mt-2 w-full rounded-xl border border-walnut/20 bg-cream/90 px-4 py-3 text-base outline-none transition focus:border-sage"
                 placeholder="Your name"
                 required
               />
@@ -105,7 +109,7 @@ function ContactPage() {
               <input
                 type="email"
                 name="email"
-                className="mt-2 w-full rounded-xl border border-charcoal/15 bg-white/90 px-4 py-3 text-base outline-none transition focus:border-dusty"
+                className="mt-2 w-full rounded-xl border border-walnut/20 bg-cream/90 px-4 py-3 text-base outline-none transition focus:border-sage"
                 placeholder="you@example.com"
                 required
               />
@@ -115,7 +119,7 @@ function ContactPage() {
               Service of Interest
               <select
                 name="service"
-                className="mt-2 w-full rounded-xl border border-charcoal/15 bg-white/90 px-4 py-3 text-base outline-none transition focus:border-dusty"
+                className="mt-2 w-full rounded-xl border border-walnut/20 bg-cream/90 px-4 py-3 text-base outline-none transition focus:border-sage"
                 defaultValue=""
                 required
               >
@@ -135,7 +139,7 @@ function ContactPage() {
               <textarea
                 name="message"
                 rows={5}
-                className="mt-2 w-full rounded-xl border border-charcoal/15 bg-white/90 px-4 py-3 text-base outline-none transition focus:border-dusty"
+                className="mt-2 w-full rounded-xl border border-walnut/20 bg-cream/90 px-4 py-3 text-base outline-none transition focus:border-sage"
                 placeholder="Tell us about your room, style, and timeline"
                 required
               />
@@ -156,12 +160,16 @@ function ContactPage() {
           <button
             type="submit"
             disabled={isSubmitting}
-            className="mt-8 inline-flex w-full items-center justify-center rounded-full bg-dusty px-6 py-3 text-sm font-medium tracking-wide text-white transition duration-300 hover:-translate-y-0.5 hover:bg-lavender hover:shadow-soft focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-dusty"
+            className="mt-8 inline-flex w-full items-center justify-center rounded-2xl bg-sage px-6 py-3 text-sm font-medium tracking-[0.08em] text-cream transition duration-300 hover:-translate-y-0.5 hover:bg-walnut hover:shadow-soft focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-sage"
           >
             {isSubmitting ? "Sending..." : "Send Inquiry"}
           </button>
         </form>
-      </section>
+      </Reveal>
+
+      <Reveal as="section" className="mt-10 overflow-hidden rounded-[2rem] border border-walnut/10" delay={210} duration={820}>
+        <img src={textileImage} alt="Fabric and wallpaper references" className="h-52 w-full object-cover object-[50%_36%] md:h-72" />
+      </Reveal>
     </div>
   );
 }

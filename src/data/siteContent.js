@@ -85,39 +85,33 @@ export const testimonials = [
 
 export const portfolioItems = [
   {
-    title: "Cozy Living Room Palette",
+    title: "Residential Material Palette",
     tag: "Colour Story",
-    image:
-      "https://images.unsplash.com/photo-1493663284031-b7e3aefcae8e?auto=format&fit=crop&w=900&q=80",
+    image: "/colour%20palette.jpeg",
   },
   {
-    title: "Layered Bedroom Styling",
+    title: "Wallpaper + Textile Notes",
     tag: "Texture + Softness",
-    image:
-      "https://images.unsplash.com/photo-1616486029423-aaa4789e8c9a?auto=format&fit=crop&w=900&q=80",
+    image: "/textiles.jpeg",
   },
   {
-    title: "Kitchen Nook Refresh",
+    title: "Kitchen Before",
     tag: "Practical Upgrade",
-    image:
-      "https://images.unsplash.com/photo-1556911220-bff31c812dba?auto=format&fit=crop&w=900&q=80",
+    image: "/Kitchen%20before.jpeg",
   },
   {
-    title: "Hallway Warmth Edit",
+    title: "Kitchen After",
     tag: "Before + After",
-    image:
-      "https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?auto=format&fit=crop&w=900&q=80",
+    image: "/KitchenAfter.jpeg",
   },
   {
-    title: "Sage + Blush Material Board",
+    title: "Muted Sage Material Study",
     tag: "Palette",
-    image:
-      "https://images.unsplash.com/photo-1617104551722-3b2d5136648c?auto=format&fit=crop&w=900&q=80",
+    image: "/colour%20palette.jpeg",
   },
   {
-    title: "Dining Corner Styling",
+    title: "Layered Texture Edit",
     tag: "Editorial Styling",
-    image:
-      "https://images.unsplash.com/photo-1616594039964-3fd4f94a9bc6?auto=format&fit=crop&w=900&q=80",
+    image: "/textiles.jpeg",
   },
 ];

@@ -4,20 +4,26 @@ export default {
   theme: {
     extend: {
       colors: {
-        cream: "#f7f2ec",
-        lavender: "#b499c8",
-        lilac: "#cab7d8",
-        dusty: "#8f759d",
-        blush: "#dfc0ca",
-        sage: "#a6b39a",
-        charcoal: "#40393f",
+        cream: "#f4efe7",
+        linen: "#e8dece",
+        stone: "#d6c8b7",
+        taupe: "#b5a694",
+        sage: "#7f8f7a",
+        eucalyptus: "#9aa792",
+        walnut: "#6c5040",
+        roseclay: "#c7a89e",
+        charcoal: "#3f3933",
+        dusty: "#7f8f7a",
+        lilac: "#d6c8b7",
+        blush: "#c7a89e",
+        lavender: "#e8dece",
       },
       fontFamily: {
         serif: ["Cormorant Garamond", "Georgia", "serif"],
         sans: ["DM Sans", "Segoe UI", "sans-serif"],
       },
       boxShadow: {
-        soft: "0 14px 40px rgba(58, 44, 58, 0.14)",
+        soft: "0 16px 34px rgba(70, 54, 44, 0.1)",
       },
       keyframes: {
         fadeUp: {

@@ -3,7 +3,7 @@ import { Link, NavLink, Outlet, useLocation } from "react-router-dom";
 import { PrimaryButton } from "./Buttons";
 import { navLinks } from "../data/siteContent";
 
-const activeClass = "text-dusty";
+const activeClass = "text-walnut";
 
 function Layout() {
   const [open, setOpen] = useState(false);
@@ -11,7 +11,7 @@ function Layout() {
 
   return (
     <div className="min-h-screen">
-      <div className="mx-auto flex max-w-7xl items-center justify-between px-5 py-5 md:px-8">
+      <div className="mx-auto flex max-w-7xl items-center justify-between px-5 py-6 md:px-8">
         <Link to="/" className="text-3xl leading-none text-charcoal">
           Céire Dunne
           <span className="block font-sans text-xs uppercase tracking-[0.3em] text-charcoal/70">Interiors</span>
@@ -19,7 +19,7 @@ function Layout() {
 
         <button
           type="button"
-          className="rounded-full border border-dusty px-4 py-2 text-sm text-charcoal md:hidden"
+          className="rounded-2xl border border-walnut/35 bg-cream/55 px-4 py-2 text-sm text-charcoal md:hidden"
           onClick={() => setOpen((prev) => !prev)}
           aria-expanded={open}
           aria-controls="mobile-nav"
@@ -33,7 +33,7 @@ function Layout() {
               key={link.path}
               to={link.path}
               className={({ isActive }) =>
-                `text-sm tracking-wide text-charcoal transition hover:text-dusty ${isActive ? activeClass : ""}`
+                `text-sm tracking-wide text-charcoal transition hover:text-walnut ${isActive ? activeClass : ""}`
               }
             >
               {link.label}
@@ -45,7 +45,7 @@ function Layout() {
 
       <div
         id="mobile-nav"
-        className={`mx-5 overflow-hidden rounded-3xl bg-white/80 px-5 transition-all duration-300 md:hidden ${
+        className={`mx-5 overflow-hidden rounded-3xl bg-cream/85 px-5 transition-all duration-300 md:hidden ${
           open ? "max-h-96 py-5" : "max-h-0 py-0"
         }`}
       >
@@ -56,7 +56,7 @@ function Layout() {
               to={link.path}
               onClick={() => setOpen(false)}
               className={({ isActive }) =>
-                `text-base text-charcoal transition hover:text-dusty ${isActive ? activeClass : ""}`
+                `text-base text-charcoal transition hover:text-walnut ${isActive ? activeClass : ""}`
               }
             >
               {link.label}
@@ -72,19 +72,19 @@ function Layout() {
         <Outlet />
       </main>
 
-      <footer className="mt-20 border-t border-charcoal/10 bg-white/65">
+      <footer className="mt-24 border-t border-walnut/15 bg-cream/55">
         <div className="mx-auto grid max-w-7xl gap-8 px-5 py-12 md:grid-cols-3 md:px-8">
           <div>
             <p className="text-3xl text-charcoal">Céire Dunne</p>
             <p className="text-sm uppercase tracking-[0.3em] text-charcoal/70">Interiors</p>
           </div>
           <div>
-            <p className="mb-3 text-sm font-semibold uppercase tracking-[0.15em] text-dusty">Contact</p>
+            <p className="mb-3 text-sm font-semibold uppercase tracking-[0.15em] text-sage">Contact</p>
             <p className="text-charcoal/80">ceiredunneinteriors@gmail.com</p>
             <p className="text-charcoal/80">087 9956 0006</p>
           </div>
           <div>
-            <p className="mb-3 text-sm font-semibold uppercase tracking-[0.15em] text-dusty">Studio Focus</p>
+            <p className="mb-3 text-sm font-semibold uppercase tracking-[0.15em] text-sage">Studio Focus</p>
             <p className="text-charcoal/80">Thoughtful interiors for real Irish homes.</p>
           </div>
         </div>
