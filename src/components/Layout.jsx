@@ -4,6 +4,7 @@ import { PrimaryButton } from "./Buttons";
 import { navLinks } from "../data/siteContent";
 
 const activeClass = "text-walnut";
+const studioLogo = "/ceiredunneinteriorslogo.jpg";
 
 function Layout() {
   const [open, setOpen] = useState(false);
@@ -12,9 +13,12 @@ function Layout() {
   return (
     <div className="min-h-screen">
       <div className="mx-auto flex max-w-7xl items-center justify-between px-5 py-6 md:px-8">
-        <Link to="/" className="text-3xl leading-none text-charcoal">
-          Céire Dunne
-          <span className="block font-sans text-xs uppercase tracking-[0.3em] text-charcoal/70">Interiors</span>
+        <Link to="/" className="rounded-2xl bg-cream/70 p-2 pr-3 shadow-soft transition hover:bg-cream/85" aria-label="Céire Dunne Interiors home">
+          <img
+            src={studioLogo}
+            alt="Céire Dunne Interiors logo"
+            className="h-11 w-auto object-contain md:h-14"
+          />
         </Link>
 
         <button
@@ -75,8 +79,11 @@ function Layout() {
       <footer className="mt-24 border-t border-walnut/15 bg-cream/55">
         <div className="mx-auto grid max-w-7xl gap-8 px-5 py-12 md:grid-cols-3 md:px-8">
           <div>
-            <p className="text-3xl text-charcoal">Céire Dunne</p>
-            <p className="text-sm uppercase tracking-[0.3em] text-charcoal/70">Interiors</p>
+            <img
+              src={studioLogo}
+              alt="Céire Dunne Interiors logo"
+              className="h-12 w-auto max-w-[220px] object-contain"
+            />
           </div>
           <div>
             <p className="mb-3 text-sm font-semibold uppercase tracking-[0.15em] text-sage">Contact</p>

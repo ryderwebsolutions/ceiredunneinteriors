@@ -16,7 +16,8 @@ function ContactPage() {
     const payload = {
       name: formData.get("name"),
       email: formData.get("email"),
-      service: formData.get("service"),
+      phone: formData.get("phone"),
+      projectType: formData.get("projectType"),
       message: formData.get("message"),
       website: formData.get("website"),
       page_url: window.location.href,
@@ -43,7 +44,7 @@ function ContactPage() {
       event.currentTarget.reset();
       setStatus({
         type: "success",
-        message: result.message || "Inquiry received. We will be in touch shortly.",
+        message: result.message || "Thank you. Your enquiry has been sent and we will be in touch shortly.",
       });
     } catch (error) {
       setStatus({
@@ -116,9 +117,19 @@ function ContactPage() {
             </label>
 
             <label className="text-sm font-medium text-charcoal">
-              Service of Interest
+              Phone (Optional)
+              <input
+                type="tel"
+                name="phone"
+                className="mt-2 w-full rounded-xl border border-walnut/20 bg-cream/90 px-4 py-3 text-base outline-none transition focus:border-sage"
+                placeholder="Your phone number"
+              />
+            </label>
+
+            <label className="text-sm font-medium text-charcoal">
+              Project Type
               <select
-                name="service"
+                name="projectType"
                 className="mt-2 w-full rounded-xl border border-walnut/20 bg-cream/90 px-4 py-3 text-base outline-none transition focus:border-sage"
                 defaultValue=""
                 required
@@ -148,8 +159,10 @@ function ContactPage() {
 
           {status.type !== "idle" ? (
             <p
-              className={`mt-5 text-sm ${
-                status.type === "success" ? "text-green-700" : "text-red-700"
+              className={`mt-5 rounded-xl border px-4 py-3 text-sm ${
+                status.type === "success"
+                  ? "border-sage/30 bg-eucalyptus/20 text-charcoal"
+                  : "border-roseclay/40 bg-roseclay/18 text-charcoal"
               }`}
               role="status"
             >
@@ -160,9 +173,9 @@ function ContactPage() {
           <button
             type="submit"
             disabled={isSubmitting}
-            className="mt-8 inline-flex w-full items-center justify-center rounded-2xl bg-sage px-6 py-3 text-sm font-medium tracking-[0.08em] text-cream transition duration-300 hover:-translate-y-0.5 hover:bg-walnut hover:shadow-soft focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-sage"
+            className="mt-8 inline-flex w-full items-center justify-center rounded-2xl bg-sage px-6 py-3 text-sm font-medium tracking-[0.08em] text-cream transition duration-300 hover:-translate-y-0.5 hover:bg-walnut hover:shadow-soft focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-sage disabled:cursor-not-allowed disabled:opacity-70"
           >
-            {isSubmitting ? "Sending..." : "Send Inquiry"}
+            {isSubmitting ? "Sending Enquiry..." : "Send Enquiry"}
           </button>
         </form>
       </Reveal>
