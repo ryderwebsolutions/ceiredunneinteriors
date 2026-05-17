@@ -1,7 +1,18 @@
-import { Resend } from 'resend';
+import nodemailer from 'nodemailer';
 
 const SUBJECT_LINE = 'New Website Enquiry — Céire Dunne Interiors';
 const DEFAULT_RECIPIENT = 'ceiredunneinteriors@gmail.com';
+
+const createTransporter = () =>
+    nodemailer.createTransport({
+        host: 'smtp.gmail.com',
+        port: 465,
+        secure: true,
+        auth: {
+            user: process.env.GMAIL_USER,
+            pass: process.env.GMAIL_APP_PASSWORD
+        }
+    });
 
 const validateFormData = (data) => {
     const requiredFields = ['name', 'email', 'projectType', 'message'];
@@ -100,25 +111,24 @@ export default async function handler(req, res) {
             return res.status(400).json({ success: false, error: validation.error });
         }
 
-        if (!process.env.RESEND_API_KEY) {
+        if (!process.env.GMAIL_USER || !process.env.GMAIL_APP_PASSWORD) {
             return res.status(500).json({
                 success: false,
-                error: 'Server email is not configured. Please add RESEND_API_KEY.'
+                // Add these in Vercel Project Settings > Environment Variables.
+                error: 'Server email is not configured. Please add GMAIL_USER and GMAIL_APP_PASSWORD.'
             });
         }
 
-        const resend = new Resend(process.env.RESEND_API_KEY);
+        const transporter = createTransporter();
 
-        const result = await resend.emails.send({
-            from: process.env.EMAIL_FROM || 'Céire Dunne Interiors <onboarding@resend.dev>',
-            to: [process.env.INTERIOR_FORM_RECIPIENT_EMAIL || DEFAULT_RECIPIENT],
+        await transporter.sendMail({
+            from: `Céire Dunne Interiors <${process.env.GMAIL_USER}>`,
+            to: DEFAULT_RECIPIENT,
             subject: SUBJECT_LINE,
-            html: formatEmailBody(data)
+            html: formatEmailBody(data),
+            text: formatPlainTextBody(data),
+            replyTo: data.email
         });
-
-        if (result.error) {
-            throw new Error(result.error.message || 'Resend delivery failed');
-        }
 
         return res.status(200).json({
             success: true,
@@ -126,14 +136,6 @@ export default async function handler(req, res) {
         });
     } catch (error) {
         const errorMessage = error?.message || 'Unknown error';
-
-        if (errorMessage.includes('verify a domain') || errorMessage.includes('domain is not verified') || errorMessage.includes('verify your domain')) {
-            console.error('Interior contact submission blocked: sender domain not yet verified in Resend.');
-            return res.status(503).json({
-                success: false,
-                error: 'Enquiry delivery is being activated. Please email ceiredunneinteriors@gmail.com directly for now.'
-            });
-        }
 
         console.error('Interior contact submission error:', errorMessage);
         return res.status(500).json({
