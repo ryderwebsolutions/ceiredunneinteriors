@@ -85,6 +85,47 @@ h4 {
 }
 
 @media (max-width: 768px) {
+  body {
+    background:
+      radial-gradient(circle at 10% 8%, rgba(214, 200, 183, 0.08), transparent 30%),
+      linear-gradient(180deg, #ffffff 0%, #fdfbf7 100%);
+  }
+
+  .soft-card,
+  .editorial-panel,
+  .texture-wash,
+  footer,
+  .bg-linen\/45,
+  .bg-white\/84,
+  .bg-white\/85,
+  .bg-white\/88,
+  .bg-white\/90,
+  .bg-white\/94 {
+    background-color: rgba(255, 255, 255, 0.97) !important;
+    background-image: none !important;
+  }
+
+  .soft-card,
+  .editorial-panel,
+  .texture-wash,
+  footer,
+  .bg-linen\/45,
+  .bg-white\/84,
+  .bg-white\/85,
+  .bg-white\/88,
+  .bg-white\/90,
+  .bg-white\/94 {
+    box-shadow: 0 10px 24px rgba(70, 54, 44, 0.045) !important;
+  }
+
+  .soft-card {
+    backdrop-filter: none;
+  }
+
+  .photo-curve {
+    border-color: rgba(108, 80, 64, 0.05);
+  }
+
   .photo-curve {
     border-radius: 18px;
   }
