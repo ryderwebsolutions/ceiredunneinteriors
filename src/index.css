@@ -3,10 +3,10 @@
 @tailwind utilities;
 
 :root {
-  --cream: #f4efe7;
-  --linen: #e8dece;
-  --stone: #d6c8b7;
-  --taupe: #b5a694;
+  --cream: #fbf8f3;
+  --linen: #f3ede4;
+  --stone: #e1d6c7;
+  --taupe: #c2b3a1;
   --sage: #7f8f7a;
   --eucalyptus: #9aa792;
   --walnut: #6c5040;
@@ -23,9 +23,9 @@ body {
   font-family: "DM Sans", "Segoe UI", sans-serif;
   color: var(--charcoal);
   background:
-    radial-gradient(circle at 10% 8%, rgba(214, 200, 183, 0.4), transparent 34%),
-    radial-gradient(circle at 88% 5%, rgba(154, 167, 146, 0.22), transparent 28%),
-    linear-gradient(180deg, #f5f0e8 0%, #f1ebe1 45%, #efe7dc 100%);
+    radial-gradient(circle at 10% 8%, rgba(214, 200, 183, 0.18), transparent 32%),
+    radial-gradient(circle at 88% 5%, rgba(154, 167, 146, 0.12), transparent 26%),
+    linear-gradient(180deg, #ffffff 0%, #fcfaf6 48%, #f7f3ec 100%);
   line-height: 1.6;
 }
 
@@ -34,7 +34,8 @@ h2,
 h3,
 h4 {
   font-family: "Cormorant Garamond", Georgia, serif;
-  letter-spacing: 0.015em;
+  letter-spacing: 0.01em;
+  font-weight: 400;
 }
 
 .page-enter {
@@ -42,8 +43,9 @@ h4 {
 }
 
 .soft-card {
-  background: rgba(248, 243, 236, 0.74);
-  backdrop-filter: blur(4px);
+  background: rgba(255, 255, 255, 0.82);
+  border: 1px solid rgba(108, 80, 64, 0.08);
+  backdrop-filter: blur(5px);
 }
 
 .organic-shape {
@@ -52,16 +54,17 @@ h4 {
 
 .photo-curve {
   border-radius: 24px;
-  border: 1px solid rgba(108, 80, 64, 0.08);
+  border: 1px solid rgba(108, 80, 64, 0.07);
 }
 
 .editorial-panel {
-  background: linear-gradient(135deg, rgba(232, 222, 206, 0.72), rgba(245, 239, 230, 0.86));
-  border: 1px solid rgba(108, 80, 64, 0.1);
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.9), rgba(246, 241, 234, 0.92));
+  border: 1px solid rgba(108, 80, 64, 0.09);
 }
 
 .texture-wash {
-  background: linear-gradient(150deg, rgba(154, 167, 146, 0.2), rgba(199, 168, 158, 0.12));
+  background: linear-gradient(150deg, rgba(255, 255, 255, 0.92), rgba(243, 237, 228, 0.9));
+  box-shadow: 0 16px 34px rgba(70, 54, 44, 0.06);
 }
 
 .reveal {

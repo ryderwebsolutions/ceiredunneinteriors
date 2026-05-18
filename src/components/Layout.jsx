@@ -12,18 +12,18 @@ function Layout() {
 
   return (
     <div className="min-h-screen">
-      <div className="mx-auto flex max-w-7xl items-center justify-between px-5 py-6 md:px-8">
-        <Link to="/" className="rounded-2xl bg-cream/70 p-2 pr-3 shadow-soft transition hover:bg-cream/85" aria-label="Céire Dunne Interiors home">
+      <div className="mx-auto flex max-w-7xl items-center justify-between px-5 py-7 md:px-8 md:py-8">
+        <Link to="/" className="rounded-2xl border border-walnut/10 bg-white/85 p-2.5 pr-3.5 shadow-soft transition hover:bg-cream/70" aria-label="Céire Dunne Interiors home">
           <img
             src={studioLogo}
             alt="Céire Dunne Interiors logo"
-            className="h-11 w-auto object-contain md:h-14"
+            className="h-12 w-auto object-contain md:h-16"
           />
         </Link>
 
         <button
           type="button"
-          className="rounded-2xl border border-walnut/35 bg-cream/55 px-4 py-2 text-sm text-charcoal md:hidden"
+          className="rounded-2xl border border-walnut/20 bg-white/90 px-4 py-2 text-sm text-charcoal shadow-soft md:hidden"
           onClick={() => setOpen((prev) => !prev)}
           aria-expanded={open}
           aria-controls="mobile-nav"
@@ -49,7 +49,7 @@ function Layout() {
 
       <div
         id="mobile-nav"
-        className={`mx-5 overflow-hidden rounded-3xl bg-cream/85 px-5 transition-all duration-300 md:hidden ${
+        className={`mx-5 overflow-hidden rounded-3xl border border-walnut/10 bg-white/94 px-5 shadow-soft transition-all duration-300 md:hidden ${
           open ? "max-h-96 py-5" : "max-h-0 py-0"
         }`}
       >
@@ -76,13 +76,13 @@ function Layout() {
         <Outlet />
       </main>
 
-      <footer className="mt-24 border-t border-walnut/15 bg-cream/55">
-        <div className="mx-auto grid max-w-7xl gap-8 px-5 py-12 md:grid-cols-3 md:px-8">
+      <footer className="mt-24 border-t border-walnut/12 bg-white/80">
+        <div className="mx-auto grid max-w-7xl gap-8 px-5 py-14 md:grid-cols-3 md:px-8">
           <div>
             <img
               src={studioLogo}
               alt="Céire Dunne Interiors logo"
-              className="h-12 w-auto max-w-[220px] object-contain"
+              className="h-14 w-auto max-w-[230px] object-contain"
             />
           </div>
           <div>

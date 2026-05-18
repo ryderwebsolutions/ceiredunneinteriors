@@ -57,7 +57,7 @@ function ContactPage() {
   };
 
   return (
-    <div className="mx-auto max-w-7xl px-5 pb-20 pt-10 md:px-8 md:pt-14">
+    <div className="mx-auto max-w-7xl px-5 pb-20 pt-12 md:px-8 md:pb-24 md:pt-16">
       <Reveal as="section" className="grid gap-10 md:grid-cols-[1fr_1.1fr]" threshold={0.1}>
         <div>
           <SectionHeading
@@ -65,14 +65,14 @@ function ContactPage() {
             title="Book your interior consultation"
             intro="Share your room, goals, and style preferences. You will receive warm, practical guidance tailored to your home."
           />
-          <div className="mt-8 space-y-4 rounded-3xl bg-cream/75 p-6 shadow-soft">
-            <p className="text-charcoal/80">
+          <div className="mt-8 space-y-4 rounded-3xl border border-walnut/10 bg-white/88 p-6 shadow-soft">
+            <p className="text-charcoal/76">
               <span className="font-semibold text-charcoal">Email:</span> ceiredunneinteriors@gmail.com
             </p>
-            <p className="text-charcoal/80">
+            <p className="text-charcoal/76">
               <span className="font-semibold text-charcoal">Phone:</span> 087 9956 0006
             </p>
-            <p className="text-charcoal/80">
+            <p className="text-charcoal/76">
               <span className="font-semibold text-charcoal">Instagram:</span> @ceiredunneinteriors
             </p>
           </div>
@@ -84,12 +84,12 @@ function ContactPage() {
         </div>
 
         <form
-          className="rounded-[2rem] border border-walnut/10 bg-linen/45 p-8 shadow-soft"
+          className="rounded-[2rem] border border-walnut/10 bg-white/88 p-8 shadow-soft"
           aria-label="Consultation inquiry form"
           onSubmit={handleSubmit}
         >
-          <h2 className="text-4xl text-charcoal">Inquiry Form</h2>
-          <p className="mt-2 text-charcoal/75">Tell us about your home and what support you need.</p>
+          <h2 className="text-4xl font-normal text-charcoal">Inquiry Form</h2>
+          <p className="mt-2 text-charcoal/72">Tell us about your home and what support you need.</p>
 
           <div className="mt-6 grid gap-5">
             <input type="text" name="website" className="hidden" tabIndex="-1" autoComplete="off" />
@@ -99,7 +99,7 @@ function ContactPage() {
               <input
                 type="text"
                 name="name"
-                className="mt-2 w-full rounded-xl border border-walnut/20 bg-cream/90 px-4 py-3 text-base outline-none transition focus:border-sage"
+                className="mt-2 w-full rounded-xl border border-walnut/16 bg-white/94 px-4 py-3 text-base outline-none transition focus:border-sage"
                 placeholder="Your name"
                 required
               />
@@ -110,7 +110,7 @@ function ContactPage() {
               <input
                 type="email"
                 name="email"
-                className="mt-2 w-full rounded-xl border border-walnut/20 bg-cream/90 px-4 py-3 text-base outline-none transition focus:border-sage"
+                className="mt-2 w-full rounded-xl border border-walnut/16 bg-white/94 px-4 py-3 text-base outline-none transition focus:border-sage"
                 placeholder="you@example.com"
                 required
               />
@@ -121,7 +121,7 @@ function ContactPage() {
               <input
                 type="tel"
                 name="phone"
-                className="mt-2 w-full rounded-xl border border-walnut/20 bg-cream/90 px-4 py-3 text-base outline-none transition focus:border-sage"
+                className="mt-2 w-full rounded-xl border border-walnut/16 bg-white/94 px-4 py-3 text-base outline-none transition focus:border-sage"
                 placeholder="Your phone number"
               />
             </label>
@@ -130,7 +130,7 @@ function ContactPage() {
               Project Type
               <select
                 name="projectType"
-                className="mt-2 w-full rounded-xl border border-walnut/20 bg-cream/90 px-4 py-3 text-base outline-none transition focus:border-sage"
+                className="mt-2 w-full rounded-xl border border-walnut/16 bg-white/94 px-4 py-3 text-base outline-none transition focus:border-sage"
                 defaultValue=""
                 required
               >
@@ -150,7 +150,7 @@ function ContactPage() {
               <textarea
                 name="message"
                 rows={5}
-                className="mt-2 w-full rounded-xl border border-walnut/20 bg-cream/90 px-4 py-3 text-base outline-none transition focus:border-sage"
+                className="mt-2 w-full rounded-xl border border-walnut/16 bg-white/94 px-4 py-3 text-base outline-none transition focus:border-sage"
                 placeholder="Tell us about your room, style, and timeline"
                 required
               />
@@ -161,8 +161,8 @@ function ContactPage() {
             <p
               className={`mt-5 rounded-xl border px-4 py-3 text-sm ${
                 status.type === "success"
-                  ? "border-sage/30 bg-eucalyptus/20 text-charcoal"
-                  : "border-roseclay/40 bg-roseclay/18 text-charcoal"
+                  ? "border-sage/20 bg-eucalyptus/12 text-charcoal"
+                  : "border-roseclay/30 bg-roseclay/12 text-charcoal"
               }`}
               role="status"
             >
@@ -179,7 +179,7 @@ function ContactPage() {
           </button>
         </form>
       </Reveal>
-
+            className="mt-8 inline-flex w-full items-center justify-center rounded-2xl border border-sage/25 bg-white/90 px-6 py-3 text-sm font-medium tracking-[0.08em] text-sage shadow-soft transition duration-300 hover:-translate-y-0.5 hover:bg-sage hover:text-cream focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-sage disabled:cursor-not-allowed disabled:opacity-70"
       <Reveal as="section" className="mt-10 overflow-hidden rounded-[2rem] border border-walnut/10" delay={210} duration={820}>
         <img src={textileImage} alt="Fabric and wallpaper references" className="h-52 w-full object-cover object-[50%_36%] md:h-72" />
       </Reveal>
