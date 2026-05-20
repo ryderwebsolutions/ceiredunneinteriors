@@ -9,6 +9,17 @@ const textileImage = "/textiles.jpeg";
 const kitchenBeforeImage = "/Kitchen%20before.jpeg";
 const kitchenAfterImage = "/KitchenAfter.jpeg";
 const projectVideo = "/Kitchenvideo.mp4";
+const moodboardImage = "/image-01.jpeg";
+const consultationPaletteImage = "/image-02.jpeg";
+const wallpaperSampleImage = "/image-03.jpeg";
+const furnitureInspirationImage = "/image-04.jpeg";
+const stylingReferenceImage = "/image-05.jpeg";
+const processStepOneImage = "/image-06.jpeg";
+const processStepTwoImage = "/image-07.jpeg";
+const processStepThreeImage = "/image-08.jpeg";
+const processStepFourImage = "/image-09.jpeg";
+const galleryEditorialOne = "/image-10.jpeg";
+const galleryEditorialTwo = "/image-11.jpeg";
 
 function HomePage() {
   const [isVideoPlaying, setIsVideoPlaying] = useState(true);
@@ -47,14 +58,14 @@ function HomePage() {
 
         <div className="relative min-h-[420px] md:min-h-[500px]">
           <img
-            src={paletteImage}
-            alt="Project palette and materials board"
-            className="photo-curve absolute right-0 top-1 h-56 w-44 object-cover object-[52%_42%] shadow-soft md:h-80 md:w-64"
+            src={moodboardImage}
+            alt="Moodboard collage for an interior design concept"
+            className="photo-curve absolute right-0 top-1 h-56 w-44 object-cover object-center shadow-soft md:h-80 md:w-64"
           />
           <img
-            src={textileImage}
-            alt="Textile and wallpaper texture inspiration"
-            className="photo-curve absolute bottom-8 left-0 h-64 w-52 object-cover object-[50%_35%] shadow-soft md:h-[22rem] md:w-72"
+            src={consultationPaletteImage}
+            alt="Colour consultation references and sample tones"
+            className="photo-curve absolute bottom-8 left-0 h-64 w-52 object-cover object-center shadow-soft md:h-[22rem] md:w-72"
           />
           <div className="organic-shape absolute -bottom-2 right-8 h-24 w-24 bg-roseclay/35" aria-hidden="true" />
           <div className="organic-shape absolute left-24 top-0 h-16 w-16 bg-eucalyptus/35" aria-hidden="true" />
@@ -82,6 +93,30 @@ function HomePage() {
             </Reveal>
           ))}
         </div>
+        <div className="mt-8 grid gap-4 md:grid-cols-3 md:gap-6">
+          {[
+            {
+              src: processStepOneImage,
+              label: "Consultation Notes",
+              alt: "Consultation process visual with notes and references",
+            },
+            {
+              src: processStepTwoImage,
+              label: "Material Direction",
+              alt: "Material and finish references for design planning",
+            },
+            {
+              src: processStepThreeImage,
+              label: "Styling Decisions",
+              alt: "Styling references used to finalise a room concept",
+            },
+          ].map((item) => (
+            <figure key={item.label} className="space-y-2">
+              <img src={item.src} alt={item.alt} className="photo-curve h-44 w-full object-cover object-center shadow-soft" />
+              <figcaption className="text-xs uppercase tracking-[0.16em] text-charcoal/70">{item.label}</figcaption>
+            </figure>
+          ))}
+        </div>
       </Reveal>
 
       <Reveal as="section" className="mx-auto grid max-w-7xl gap-10 px-5 py-20 md:grid-cols-2 md:px-8 md:py-24" delay={190} duration={900}>
@@ -100,10 +135,59 @@ function HomePage() {
           </ul>
         </div>
         <img
-          src={paletteImage}
-          alt="Colour and material board for a residential project"
-          className="photo-curve h-full min-h-[280px] w-full object-cover object-[53%_48%] shadow-soft md:min-h-[320px]"
+          src={wallpaperSampleImage}
+          alt="Wallpaper and colour palette samples during consultation"
+          className="photo-curve h-full min-h-[280px] w-full object-cover object-center shadow-soft md:min-h-[320px]"
         />
+      </Reveal>
+
+      <Reveal as="section" className="mx-auto max-w-7xl px-5 py-16 md:px-8 md:py-20" delay={230} duration={880}>
+        <SectionHeading
+          eyebrow="The Process"
+          title="How it works"
+          intro="A calm, personal process designed around your home, your style, and your life."
+        />
+        <ol className="mt-12 grid list-none gap-10 p-0 md:grid-cols-4 md:gap-8">
+          {[
+            {
+              n: "01",
+              title: "Initial Enquiry",
+              text: "Tell Céire about your room, your style, and what you need help with. No jargon, no pressure.",
+            },
+            {
+              n: "02",
+              title: "Consultation",
+              text: "Discuss colour, layout, finishes, furniture, and practical design options at your own pace.",
+            },
+            {
+              n: "03",
+              title: "Design Direction",
+              text: "Receive clear guidance, moodboard ideas, colour suggestions, and tailored styling recommendations.",
+            },
+            {
+              n: "04",
+              title: "Confident Next Steps",
+              text: "Move forward with a calmer, clearer vision and a simple, practical plan for your home.",
+            },
+          ].map((step) => (
+            <li key={step.n}>
+              <span
+                className="block font-normal leading-none text-sage/20"
+                style={{ fontFamily: '"Cormorant Garamond", Georgia, serif', fontSize: "5rem" }}
+                aria-hidden="true"
+              >
+                {step.n}
+              </span>
+              <h3
+                className="mt-3 text-xl font-normal text-charcoal"
+                style={{ fontFamily: '"Cormorant Garamond", Georgia, serif' }}
+              >
+                {step.title}
+              </h3>
+              <p className="mt-2 text-sm leading-relaxed text-charcoal/65">{step.text}</p>
+            </li>
+          ))}
+        </ol>
       </Reveal>
 
       <Reveal as="section" className="mx-auto max-w-7xl px-5 py-20 md:px-8 md:py-24" delay={270} duration={900}>
@@ -119,7 +203,10 @@ function HomePage() {
               alt="Kitchen before design transformation"
               className="photo-curve h-[20rem] w-full object-cover object-[48%_45%] shadow-soft md:h-[440px]"
             />
-            <figcaption className="text-xs uppercase tracking-[0.18em] text-charcoal/70">Before</figcaption>
+            <figcaption className="space-y-1.5">
+              <p className="text-xs font-semibold uppercase tracking-[0.18em] text-charcoal/55">Before</p>
+              <p className="text-sm leading-relaxed text-charcoal/58">Heavy tones and flat finishes left the room feeling smaller and darker.</p>
+            </figcaption>
           </figure>
           <figure className="space-y-3">
             <img
@@ -127,9 +214,15 @@ function HomePage() {
               alt="Kitchen after design transformation"
               className="photo-curve h-[20rem] w-full object-cover object-[50%_48%] shadow-soft md:h-[440px]"
             />
-            <figcaption className="text-xs uppercase tracking-[0.18em] text-charcoal/70">After</figcaption>
+            <figcaption className="space-y-1.5">
+              <p className="text-xs font-semibold uppercase tracking-[0.18em] text-sage">After</p>
+              <p className="text-sm leading-relaxed text-charcoal/58">Lighter tones, considered finishes, and cohesive material choices lifted the entire feel of the space.</p>
+            </figcaption>
           </figure>
         </div>
+        <p className="mt-5 px-1 text-sm leading-relaxed text-charcoal/58 md:text-center">
+          Small, intentional changes in colour, texture, and finish can completely shift how a space feels — calmer, brighter, and far more considered.
+        </p>
       </Reveal>
 
       <Reveal as="section" className="mx-auto max-w-7xl px-5 py-20 md:px-8 md:py-24" delay={360} duration={920}>
@@ -140,6 +233,18 @@ function HomePage() {
             <p className="mt-4 text-charcoal/76">
               A short portfolio clip that captures material warmth, lighting, and spatial flow in context.
             </p>
+            <div className="mt-7 grid grid-cols-2 gap-3">
+              <img
+                src={furnitureInspirationImage}
+                alt="Furniture inspiration image for living space planning"
+                className="photo-curve h-24 w-full object-cover object-center shadow-soft md:h-28"
+              />
+              <img
+                src={stylingReferenceImage}
+                alt="Interior styling reference with layered textures"
+                className="photo-curve h-24 w-full object-cover object-center shadow-soft md:h-28"
+              />
+            </div>
             <button
               type="button"
               onClick={toggleVideo}
@@ -170,11 +275,36 @@ function HomePage() {
           intro="Palette boards and texture details are used intentionally to guide every room's atmosphere and finish choices."
         />
         <div className="mt-10 grid grid-cols-2 gap-4 md:grid-cols-4 md:gap-6">
-          {[paletteImage, textileImage, kitchenAfterImage, paletteImage].map((src, index) => (
+          {[
+            {
+              src: paletteImage,
+              alt: "Colour palette samples for a residential interior",
+            },
+            {
+              src: textileImage,
+              alt: "Textile and wallpaper swatches for mood planning",
+            },
+            {
+              src: processStepFourImage,
+              alt: "Design process visual showing concept development",
+            },
+            {
+              src: kitchenAfterImage,
+              alt: "Completed kitchen styling and design transformation",
+            },
+            {
+              src: galleryEditorialOne,
+              alt: "Moodboard layout with furniture and finish inspiration",
+            },
+            {
+              src: galleryEditorialTwo,
+              alt: "Interior styling reference for layered textures and tone",
+            },
+          ].map((item, index) => (
             <img
-              key={`${src}-${index}`}
-              src={src}
-              alt={`Interior inspiration ${index + 1}`}
+              key={`${item.src}-${index}`}
+              src={item.src}
+              alt={item.alt}
               className={`photo-curve w-full object-cover object-center shadow-soft ${index % 2 === 0 ? "h-52 md:h-72" : "h-64 md:h-[26rem]"}`}
             />
           ))}
@@ -183,18 +313,18 @@ function HomePage() {
 
       <Reveal as="section" className="mx-auto max-w-7xl px-5 py-20 md:px-8 md:py-24" delay={510} duration={820}>
         <SectionHeading eyebrow="Client Notes" title="What homeowners say" />
-        <div className="mt-8 grid gap-6 md:grid-cols-3">
+        <div className="mt-8 grid gap-8 md:grid-cols-3 md:gap-10">
           {testimonials.map((item, index) => (
             <Reveal
               key={item.name}
               as="blockquote"
-              className="soft-card rounded-3xl border border-walnut/10 p-6 shadow-soft"
+              className="border-l-2 border-sage/25 pl-6"
               delay={560 + index * 65}
               duration={780}
               distance={14}
             >
-              <p className="text-charcoal/85">“{item.quote}”</p>
-              <cite className="mt-4 block text-sm not-italic uppercase tracking-[0.15em] text-sage">{item.name}</cite>
+              <p className="text-base leading-relaxed text-charcoal/78">"{item.quote}"</p>
+              <cite className="mt-3 block text-xs not-italic uppercase tracking-[0.15em] text-sage">{item.name}</cite>
             </Reveal>
           ))}
         </div>

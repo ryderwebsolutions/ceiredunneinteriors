@@ -1,4 +1,5 @@
 import SectionHeading from "../components/SectionHeading";
+import { PrimaryButton } from "../components/Buttons";
 import Reveal from "../components/Reveal";
 
 const paletteImage = "/colour%20palette.jpeg";
@@ -18,10 +19,17 @@ function AboutPage() {
             Céire believes good interiors should feel approachable and achievable. Her process combines creative direction
             with practical solutions, so every recommendation is grounded in real life, real homes, and real budgets.
           </p>
-          <p className="mt-4 text-lg leading-relaxed text-charcoal/76">
-            Whether you are refreshing one room or improving flow across your home, the goal is always the same:
+          <p className="mt-4 text-base leading-relaxed text-charcoal/70">
+            Whether you are refreshing one room or rethinking how your whole home flows, the goal is always the same:
             spaces with colour, comfort, and character that feel unmistakably yours.
           </p>
+          <p className="mt-4 text-base leading-relaxed text-charcoal/70">
+            Working with homeowners across Ireland, Céire provides personal guidance on colour, layout, finishes,
+            furniture, and styling — helping clients make confident, considered choices without the overwhelm.
+          </p>
+          <div className="mt-8">
+            <PrimaryButton to="/contact">Book A Consultation</PrimaryButton>
+          </div>
         </div>
 
         <div className="relative min-h-[340px] md:min-h-[420px]">
@@ -49,9 +57,9 @@ function AboutPage() {
             text: "Clear guidance designed to work within budget and improve everyday comfort.",
           },
         ].map((item) => (
-          <article key={item.title} className="soft-card rounded-3xl p-7 shadow-soft">
-            <h3 className="text-3xl font-normal text-charcoal">{item.title}</h3>
-            <p className="mt-3 text-charcoal/76">{item.text}</p>
+          <article key={item.title} className="border-t border-walnut/12 pt-6">
+            <h3 className="text-2xl font-normal text-charcoal" style={{ fontFamily: '"Cormorant Garamond", Georgia, serif' }}>{item.title}</h3>
+            <p className="mt-2 text-sm leading-relaxed text-charcoal/68">{item.text}</p>
           </article>
         ))}
       </Reveal>

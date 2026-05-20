@@ -12,7 +12,7 @@ function Layout() {
 
   return (
     <div className="min-h-screen">
-      <div className="mx-auto flex max-w-7xl items-center justify-between px-5 py-7 md:px-8 md:py-8">
+      <div className="mx-auto grid max-w-7xl grid-cols-[auto_1fr_auto] items-center gap-3 px-5 py-7 md:gap-6 md:px-8 md:py-8">
         <Link to="/" className="rounded-2xl border border-walnut/10 bg-white/85 p-2.5 pr-3.5 shadow-soft transition hover:bg-cream/70" aria-label="Céire Dunne Interiors home">
           <img
             src={studioLogo}
@@ -21,9 +21,16 @@ function Layout() {
           />
         </Link>
 
+        <p
+          className="justify-self-center min-w-0 px-1 text-center text-[0.875rem] tracking-[0.06em] text-charcoal/88 sm:text-[1.05rem] sm:tracking-[0.08em] md:text-[1.65rem] md:tracking-[0.14em]"
+          style={{ fontFamily: '"Cormorant Garamond", Georgia, serif' }}
+        >
+          Céire Dunne
+        </p>
+
         <button
           type="button"
-          className="rounded-2xl border border-walnut/20 bg-white/90 px-4 py-2 text-sm text-charcoal shadow-soft md:hidden"
+          className="justify-self-end rounded-2xl border border-walnut/20 bg-white/90 px-4 py-2 text-sm text-charcoal shadow-soft md:hidden"
           onClick={() => setOpen((prev) => !prev)}
           aria-expanded={open}
           aria-controls="mobile-nav"
@@ -31,7 +38,7 @@ function Layout() {
           Menu
         </button>
 
-        <nav className="hidden items-center gap-7 md:flex" aria-label="Main navigation">
+        <nav className="hidden items-center justify-self-end gap-7 md:flex" aria-label="Main navigation">
           {navLinks.map((link) => (
             <NavLink
               key={link.path}

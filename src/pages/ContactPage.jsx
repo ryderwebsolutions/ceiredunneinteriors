@@ -170,16 +170,19 @@ function ContactPage() {
             </p>
           ) : null}
 
+          <p className="mt-5 text-xs leading-relaxed text-charcoal/48">
+            Céire personally reviews every enquiry and will be in touch as soon as possible. Your details will only be used to respond to your message.
+          </p>
+
           <button
             type="submit"
             disabled={isSubmitting}
-            className="mt-8 inline-flex w-full items-center justify-center rounded-2xl bg-sage px-6 py-3 text-sm font-medium tracking-[0.08em] text-cream transition duration-300 hover:-translate-y-0.5 hover:bg-walnut hover:shadow-soft focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-sage disabled:cursor-not-allowed disabled:opacity-70"
+            className="mt-5 inline-flex w-full items-center justify-center rounded-2xl bg-sage px-6 py-3 text-sm font-medium tracking-[0.08em] text-cream transition duration-300 hover:-translate-y-0.5 hover:bg-walnut hover:shadow-soft focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-sage disabled:cursor-not-allowed disabled:opacity-70"
           >
             {isSubmitting ? "Sending Enquiry..." : "Send Enquiry"}
           </button>
         </form>
       </Reveal>
-            className="mt-8 inline-flex w-full items-center justify-center rounded-2xl border border-sage/25 bg-white/90 px-6 py-3 text-sm font-medium tracking-[0.08em] text-sage shadow-soft transition duration-300 hover:-translate-y-0.5 hover:bg-sage hover:text-cream focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-sage disabled:cursor-not-allowed disabled:opacity-70"
       <Reveal as="section" className="mt-10 overflow-hidden rounded-[2rem] border border-walnut/10" delay={210} duration={820}>
         <img src={textileImage} alt="Fabric and wallpaper references" className="h-52 w-full object-cover object-[50%_36%] md:h-72" />
       </Reveal>
