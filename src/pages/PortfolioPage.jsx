@@ -16,7 +16,6 @@ const livingRoomTwoImage = "/livingroom2.jpeg";
 const livingRoomThreeImage = "/livingroom3.jpeg";
 const kitchenBeforeImage = "/Kitchen%20before.jpeg";
 const kitchenAfterImage = "/KitchenAfter.jpeg";
-const projectVideo = "/Kitchenvideo.mp4";
 
 function PortfolioPage() {
   return (
@@ -206,19 +205,8 @@ function PortfolioPage() {
             </figure>
           </div>
 
-          <div className="mt-6 overflow-hidden rounded-[1.4rem] border border-walnut/12 shadow-soft">
-            <video
-              src={projectVideo}
-              autoPlay
-              muted
-              loop
-              playsInline
-              preload="metadata"
-              className="h-[18rem] w-full object-cover md:h-[24rem]"
-            />
-          </div>
-          <p className="mt-4 text-sm leading-relaxed text-charcoal/62 md:max-w-4xl">
-            A short moving view reinforces the transformation narrative and highlights how tone, texture, and joinery work together in real space.
+          <p className="mt-6 text-sm leading-relaxed text-charcoal/62 md:max-w-4xl">
+            This side-by-side presentation highlights how tone, texture, and joinery choices reshape the room into a calmer, more elevated everyday space.
           </p>
         </Reveal>
       </section>
