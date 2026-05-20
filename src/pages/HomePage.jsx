@@ -4,23 +4,16 @@ import Reveal from "../components/Reveal";
 import SectionHeading from "../components/SectionHeading";
 import { featuredServices, reasons, testimonials } from "../data/siteContent";
 
-const paletteImage = "/colour%20palette.jpeg";
+const paletteImage = "/colourpalette2.jpeg";
 const textileImage = "/textiles.jpeg";
 const kitchenBeforeImage = "/Kitchen%20before.jpeg";
 const kitchenAfterImage = "/KitchenAfter.jpeg";
 const projectVideo = "/Kitchenvideo.mp4";
-// Curated image selection — chosen for editorial quality and brand alignment
-const wallpaperPaintImage = "/image-01.jpeg"; // botanical wallpaper + sage paint chip
-const heritagePaintsImage = "/image-02.jpeg"; // Heritage paint cards on teal botanical wallpaper
-const colourFanDeckImage  = "/image-05.jpeg"; // hands reviewing colour fan deck with material samples
-const colourChartsImage   = "/image-06.jpeg"; // colour chart books spread on consultation workspace
-const tealFabricsImage    = "/image-11.jpeg"; // teal geometric fabric + coordinating colour palette
-// image-03 excluded: social media story screenshot with promotional text overlay
-// image-04 excluded: Instagram app UI screenshot
-// image-07 excluded: homemade Word-document style moodboard
-// image-08 excluded: social media collage with branded graphic overlay
-// image-09 excluded: clashes with brand palette (purple/violet tones)
-// image-10 excluded: contains third-party competitor watermark
+const wallpaperPaintImage = "/naturalwallpaper.jpeg";
+const heritagePaintsImage = "/bluewallpaper.jpeg";
+const colourFanDeckImage = "/aestheticimage.jpeg";
+const colourChartsImage = "/colourpalette1.jpeg";
+const tealFabricsImage = "/bluepalette.jpeg";
 
 function HomePage() {
   const [isVideoPlaying, setIsVideoPlaying] = useState(true);
