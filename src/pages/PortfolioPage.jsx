@@ -47,7 +47,7 @@ function PortfolioPage() {
               className="photo-curve h-64 w-full object-cover object-[52%_45%] shadow-soft md:h-full"
               loading="eager"
             />
-            <div className="rounded-2xl border border-walnut/10 bg-cream/45 p-4">
+            <div className="rounded-2xl border border-walnut/10 bg-white/90 p-4">
               <img src={logoImage} alt="Céire Dunne Interiors logo" className="h-10 w-auto" loading="lazy" />
               <p className="mt-3 text-xs uppercase tracking-[0.18em] text-sage">Section 01 · Hero Composition</p>
             </div>

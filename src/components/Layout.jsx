@@ -13,7 +13,7 @@ function Layout() {
   return (
     <div className="min-h-screen">
       <div className="mx-auto grid max-w-7xl grid-cols-[auto_1fr_auto] items-center gap-3 px-5 py-7 md:gap-6 md:px-8 md:py-8">
-        <Link to="/" className="rounded-2xl border border-walnut/10 bg-white/85 p-2.5 pr-3.5 shadow-soft transition hover:bg-cream/70" aria-label="Céire Dunne Interiors home">
+        <Link to="/" className="rounded-2xl border border-walnut/10 bg-white/90 p-2.5 pr-3.5 shadow-soft transition hover:bg-white" aria-label="Céire Dunne Interiors home">
           <img
             src={studioLogo}
             alt="Céire Dunne Interiors logo"
@@ -83,7 +83,7 @@ function Layout() {
         <Outlet />
       </main>
 
-      <footer className="mt-24 border-t border-walnut/12 bg-white/80">
+      <footer className="mt-24 border-t border-walnut/12 bg-white/90">
         <div className="mx-auto grid max-w-7xl gap-8 px-5 py-14 md:grid-cols-3 md:px-8">
           <div>
             <img

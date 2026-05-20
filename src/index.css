@@ -4,6 +4,7 @@
 
 :root {
   --cream: #fbf8f3;
+  --paper-white: #fffdf9;
   --linen: #f3ede4;
   --stone: #e1d6c7;
   --taupe: #c2b3a1;
@@ -22,10 +23,7 @@ body {
   margin: 0;
   font-family: "DM Sans", "Segoe UI", sans-serif;
   color: var(--charcoal);
-  background:
-    radial-gradient(circle at 10% 8%, rgba(214, 200, 183, 0.18), transparent 32%),
-    radial-gradient(circle at 88% 5%, rgba(154, 167, 146, 0.12), transparent 26%),
-    linear-gradient(180deg, #ffffff 0%, #fcfaf6 48%, #f7f3ec 100%);
+  background: var(--paper-white);
   line-height: 1.6;
 }
 
@@ -43,7 +41,7 @@ h4 {
 }
 
 .soft-card {
-  background: rgba(255, 255, 255, 0.82);
+  background: rgba(255, 253, 249, 0.98);
   border: 1px solid rgba(108, 80, 64, 0.08);
   backdrop-filter: blur(5px);
 }
@@ -58,13 +56,26 @@ h4 {
 }
 
 .editorial-panel {
-  background: linear-gradient(135deg, rgba(255, 255, 255, 0.9), rgba(246, 241, 234, 0.92));
+  background: rgba(255, 253, 249, 0.99);
   border: 1px solid rgba(108, 80, 64, 0.09);
 }
 
 .texture-wash {
-  background: linear-gradient(150deg, rgba(255, 255, 255, 0.92), rgba(243, 237, 228, 0.9));
+  background: rgba(255, 253, 249, 0.99);
   box-shadow: 0 16px 34px rgba(70, 54, 44, 0.06);
+}
+
+.bg-linen\/45,
+.bg-cream\/45,
+.bg-white\/78,
+.bg-white\/80,
+.bg-white\/84,
+.bg-white\/85,
+.bg-white\/88,
+.bg-white\/90,
+.bg-white\/94 {
+  background-color: rgba(255, 253, 249, 0.99) !important;
+  background-image: none !important;
 }
 
 .reveal {
@@ -86,22 +97,23 @@ h4 {
 
 @media (max-width: 768px) {
   body {
-    background:
-      radial-gradient(circle at 10% 8%, rgba(214, 200, 183, 0.08), transparent 30%),
-      linear-gradient(180deg, #ffffff 0%, #fdfbf7 100%);
+    background: var(--paper-white);
   }
 
   .soft-card,
   .editorial-panel,
   .texture-wash,
   footer,
+  .bg-cream\/45,
+  .bg-white\/78,
+  .bg-white\/80,
   .bg-linen\/45,
   .bg-white\/84,
   .bg-white\/85,
   .bg-white\/88,
   .bg-white\/90,
   .bg-white\/94 {
-    background-color: rgba(255, 255, 255, 0.97) !important;
+    background-color: rgba(255, 253, 249, 0.99) !important;
     background-image: none !important;
   }
 
@@ -109,6 +121,9 @@ h4 {
   .editorial-panel,
   .texture-wash,
   footer,
+  .bg-cream\/45,
+  .bg-white\/78,
+  .bg-white\/80,
   .bg-linen\/45,
   .bg-white\/84,
   .bg-white\/85,

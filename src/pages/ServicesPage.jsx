@@ -24,7 +24,7 @@ function ServicesPage() {
           </article>
         ))}
       </Reveal>
-      <Reveal className="mt-16 grid gap-8 rounded-[2rem] border border-walnut/10 bg-linen/45 p-8 md:grid-cols-2 md:p-12" delay={230} duration={880}>
+      <Reveal className="mt-16 grid gap-8 rounded-[2rem] border border-walnut/10 bg-white/90 p-8 md:grid-cols-2 md:p-12" delay={230} duration={880}>
         <div>
           <h2 className="text-4xl font-normal text-charcoal">What a consultation can include</h2>
           <ul className="mt-5 space-y-3 text-charcoal/80">
