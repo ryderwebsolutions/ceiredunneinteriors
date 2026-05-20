@@ -9,17 +9,18 @@ const textileImage = "/textiles.jpeg";
 const kitchenBeforeImage = "/Kitchen%20before.jpeg";
 const kitchenAfterImage = "/KitchenAfter.jpeg";
 const projectVideo = "/Kitchenvideo.mp4";
-const moodboardImage = "/image-01.jpeg";
-const consultationPaletteImage = "/image-02.jpeg";
-const wallpaperSampleImage = "/image-03.jpeg";
-const furnitureInspirationImage = "/image-04.jpeg";
-const stylingReferenceImage = "/image-05.jpeg";
-const processStepOneImage = "/image-06.jpeg";
-const processStepTwoImage = "/image-07.jpeg";
-const processStepThreeImage = "/image-08.jpeg";
-const processStepFourImage = "/image-09.jpeg";
-const galleryEditorialOne = "/image-10.jpeg";
-const galleryEditorialTwo = "/image-11.jpeg";
+// Curated image selection — chosen for editorial quality and brand alignment
+const wallpaperPaintImage = "/image-01.jpeg"; // botanical wallpaper + sage paint chip
+const heritagePaintsImage = "/image-02.jpeg"; // Heritage paint cards on teal botanical wallpaper
+const colourFanDeckImage  = "/image-05.jpeg"; // hands reviewing colour fan deck with material samples
+const colourChartsImage   = "/image-06.jpeg"; // colour chart books spread on consultation workspace
+const tealFabricsImage    = "/image-11.jpeg"; // teal geometric fabric + coordinating colour palette
+// image-03 excluded: social media story screenshot with promotional text overlay
+// image-04 excluded: Instagram app UI screenshot
+// image-07 excluded: homemade Word-document style moodboard
+// image-08 excluded: social media collage with branded graphic overlay
+// image-09 excluded: clashes with brand palette (purple/violet tones)
+// image-10 excluded: contains third-party competitor watermark
 
 function HomePage() {
   const [isVideoPlaying, setIsVideoPlaying] = useState(true);
@@ -58,13 +59,13 @@ function HomePage() {
 
         <div className="relative min-h-[420px] md:min-h-[500px]">
           <img
-            src={moodboardImage}
-            alt="Moodboard collage for an interior design concept"
+            src={wallpaperPaintImage}
+            alt="Botanical wallpaper and sage paint chip selection for an Irish home"
             className="photo-curve absolute right-0 top-1 h-56 w-44 object-cover object-center shadow-soft md:h-80 md:w-64"
           />
           <img
-            src={consultationPaletteImage}
-            alt="Colour consultation references and sample tones"
+            src={colourFanDeckImage}
+            alt="Interior designer reviewing colour fan deck and material samples"
             className="photo-curve absolute bottom-8 left-0 h-64 w-52 object-cover object-center shadow-soft md:h-[22rem] md:w-72"
           />
           <div className="organic-shape absolute -bottom-2 right-8 h-24 w-24 bg-roseclay/35" aria-hidden="true" />
@@ -96,19 +97,19 @@ function HomePage() {
         <div className="mt-8 grid gap-4 md:grid-cols-3 md:gap-6">
           {[
             {
-              src: processStepOneImage,
-              label: "Consultation Notes",
-              alt: "Consultation process visual with notes and references",
+              src: heritagePaintsImage,
+              label: "Colour Selection",
+              alt: "Heritage paint colours paired with botanical wallpaper for a client project",
             },
             {
-              src: processStepTwoImage,
-              label: "Material Direction",
-              alt: "Material and finish references for design planning",
+              src: tealFabricsImage,
+              label: "Materials & Texture",
+              alt: "Teal geometric fabric and textured samples chosen for material direction",
             },
             {
-              src: processStepThreeImage,
-              label: "Styling Decisions",
-              alt: "Styling references used to finalise a room concept",
+              src: paletteImage,
+              label: "Palette Planning",
+              alt: "Curated paint palette cards organised for a colour consultation",
             },
           ].map((item) => (
             <figure key={item.label} className="space-y-2">
@@ -135,9 +136,9 @@ function HomePage() {
           </ul>
         </div>
         <img
-          src={wallpaperSampleImage}
-          alt="Wallpaper and colour palette samples during consultation"
-          className="photo-curve h-full min-h-[280px] w-full object-cover object-center shadow-soft md:min-h-[320px]"
+          src={colourChartsImage}
+          alt="Colour chart books and wallpaper samples spread during a home consultation"
+          className="photo-curve h-full min-h-[280px] w-full object-cover object-[45%_62%] shadow-soft md:min-h-[320px]"
         />
       </Reveal>
 
@@ -235,13 +236,13 @@ function HomePage() {
             </p>
             <div className="mt-7 grid grid-cols-2 gap-3">
               <img
-                src={furnitureInspirationImage}
-                alt="Furniture inspiration image for living space planning"
+                src={textileImage}
+                alt="Layered fabric and textile samples for a soft interior scheme"
                 className="photo-curve h-24 w-full object-cover object-center shadow-soft md:h-28"
               />
               <img
-                src={stylingReferenceImage}
-                alt="Interior styling reference with layered textures"
+                src={wallpaperPaintImage}
+                alt="Botanical wallpaper and sage paint chip pairing"
                 className="photo-curve h-24 w-full object-cover object-center shadow-soft md:h-28"
               />
             </div>
@@ -270,44 +271,49 @@ function HomePage() {
 
       <Reveal as="section" className="mx-auto max-w-7xl px-5 py-20 md:px-8 md:py-24" delay={440} duration={860}>
         <SectionHeading
-          eyebrow="Inspiration Gallery"
-          title="Material-led accents and mood layers"
-          intro="Palette boards and texture details are used intentionally to guide every room's atmosphere and finish choices."
+          eyebrow="Studio Work"
+          title="Colour, material, and considered detail"
+          intro="Every palette, fabric choice, and finish selection is made with intention — guided by light, lifestyle, and the warmth a room needs."
         />
-        <div className="mt-10 grid grid-cols-2 gap-4 md:grid-cols-4 md:gap-6">
-          {[
-            {
-              src: paletteImage,
-              alt: "Colour palette samples for a residential interior",
-            },
-            {
-              src: textileImage,
-              alt: "Textile and wallpaper swatches for mood planning",
-            },
-            {
-              src: processStepFourImage,
-              alt: "Design process visual showing concept development",
-            },
-            {
-              src: kitchenAfterImage,
-              alt: "Completed kitchen styling and design transformation",
-            },
-            {
-              src: galleryEditorialOne,
-              alt: "Moodboard layout with furniture and finish inspiration",
-            },
-            {
-              src: galleryEditorialTwo,
-              alt: "Interior styling reference for layered textures and tone",
-            },
-          ].map((item, index) => (
+        <div className="mt-10 space-y-4">
+          <div className="grid gap-4 md:grid-cols-[1.65fr_1fr]">
             <img
-              key={`${item.src}-${index}`}
-              src={item.src}
-              alt={item.alt}
-              className={`photo-curve w-full object-cover object-center shadow-soft ${index % 2 === 0 ? "h-52 md:h-72" : "h-64 md:h-[26rem]"}`}
+              src={colourFanDeckImage}
+              alt="Interior designer carefully reviewing colour fan deck with material and texture samples"
+              className="photo-curve h-64 w-full object-cover object-center shadow-soft md:h-[440px]"
             />
-          ))}
+            <div className="flex flex-col gap-4">
+              <img
+                src={heritagePaintsImage}
+                alt="Heritage paint colour cards paired with a sage botanical wallpaper"
+                className="photo-curve w-full flex-1 object-cover object-center shadow-soft"
+                style={{ minHeight: 0 }}
+              />
+              <img
+                src={tealFabricsImage}
+                alt="Teal geometric fabric samples and coordinating colour palette strip"
+                className="photo-curve w-full flex-1 object-cover object-center shadow-soft"
+                style={{ minHeight: 0 }}
+              />
+            </div>
+          </div>
+          <div className="grid grid-cols-3 gap-4">
+            <img
+              src={wallpaperPaintImage}
+              alt="Botanical wallpaper paired with a sage green paint swatch"
+              className="photo-curve h-28 w-full object-cover object-center shadow-soft md:h-44"
+            />
+            <img
+              src={textileImage}
+              alt="Layered fabric and textile samples for a soft, warm interior scheme"
+              className="photo-curve h-28 w-full object-cover object-center shadow-soft md:h-44"
+            />
+            <img
+              src={paletteImage}
+              alt="Curated paint colour palette cards for a residential interior project"
+              className="photo-curve h-28 w-full object-cover object-center shadow-soft md:h-44"
+            />
+          </div>
         </div>
       </Reveal>
 

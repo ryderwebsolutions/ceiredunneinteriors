@@ -5,6 +5,9 @@ import { portfolioItems } from "../data/siteContent";
 const paletteImage = "/colour%20palette.jpeg";
 const textileImage = "/textiles.jpeg";
 const kitchenAfterImage = "/KitchenAfter.jpeg";
+const heritagePaintsImage = "/image-02.jpeg";
+const colourFanDeckImage = "/image-05.jpeg";
+const tealFabricsImage = "/image-11.jpeg";
 
 function PortfolioPage() {
   return (
@@ -40,8 +43,9 @@ function PortfolioPage() {
 
       <Reveal className="mt-16 grid gap-6 rounded-[2rem] border border-walnut/10 bg-white/84 p-8 shadow-soft md:grid-cols-3" delay={210} duration={880}>
         <img src={paletteImage} alt="Colour and materials board" className="photo-curve h-52 w-full object-cover object-[52%_44%] shadow-soft md:h-56" />
-        <img src={textileImage} alt="Wallpaper and fabric texture study" className="photo-curve h-52 w-full object-cover object-[50%_34%] shadow-soft md:h-56" />
-        <img src={kitchenAfterImage} alt="Finished kitchen project" className="photo-curve h-52 w-full object-cover object-center shadow-soft md:h-56" />
+        <img src={paletteImage} alt="Colour and materials board" className="photo-curve h-52 w-full object-cover object-[52%_44%] shadow-soft md:h-56" />
+        <img src={tealFabricsImage} alt="Teal fabric samples and coordinating colour palette" className="photo-curve h-52 w-full object-cover object-center shadow-soft md:h-56" />
+        <img src={colourFanDeckImage} alt="Interior designer reviewing colour and material samples" className="photo-curve h-52 w-full object-cover object-center shadow-soft md:h-56" />
       </Reveal>
 
       <Reveal className="mt-8 grid gap-6 rounded-[2rem] border border-walnut/10 bg-white/82 p-8 shadow-soft md:grid-cols-4" delay={290} duration={820}>

@@ -85,33 +85,33 @@ export const testimonials = [
 
 export const portfolioItems = [
   {
-    title: "Residential Material Palette",
-    tag: "Colour Story",
-    image: "/colour%20palette.jpeg",
+    title: "Heritage Colour Story",
+    tag: "Colour Direction",
+    image: "/image-02.jpeg",
   },
   {
-    title: "Wallpaper + Textile Notes",
-    tag: "Texture + Softness",
-    image: "/textiles.jpeg",
+    title: "Fabric & Material Study",
+    tag: "Texture + Warmth",
+    image: "/image-11.jpeg",
   },
   {
-    title: "Kitchen Before",
-    tag: "Practical Upgrade",
-    image: "/Kitchen%20before.jpeg",
+    title: "Wallpaper & Paint Pairing",
+    tag: "Pattern + Palette",
+    image: "/image-01.jpeg",
   },
   {
-    title: "Kitchen After",
+    title: "Kitchen Transformation",
     tag: "Before + After",
     image: "/KitchenAfter.jpeg",
   },
   {
-    title: "Muted Sage Material Study",
-    tag: "Palette",
-    image: "/colour%20palette.jpeg",
+    title: "Colour Consultation",
+    tag: "Design Process",
+    image: "/image-05.jpeg",
   },
   {
-    title: "Layered Texture Edit",
-    tag: "Editorial Styling",
+    title: "Soft Furnishing Direction",
+    tag: "Textiles + Warmth",
     image: "/textiles.jpeg",
   },
 ];
