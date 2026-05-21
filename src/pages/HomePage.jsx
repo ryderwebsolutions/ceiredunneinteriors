@@ -115,9 +115,6 @@ function HomePage() {
         <div className="mx-auto max-w-7xl">
           <div className="mb-8 md:mb-10">
             <p className="text-xs uppercase tracking-[0.24em] text-charcoal/44">Services</p>
-            <h2 className="mt-3 max-w-2xl text-4xl font-normal leading-[1.04] text-charcoal md:text-5xl">
-              Tailored design services delivered through a calm, consultation-led process.
-            </h2>
           </div>
 
           <div className="grid gap-5 md:grid-cols-2">
@@ -209,9 +206,6 @@ function HomePage() {
         <div className="mx-auto max-w-7xl rounded-[1.6rem] border border-charcoal/8 bg-white p-6 shadow-soft md:p-10">
           <div className="mb-8 md:mb-10">
             <p className="text-xs uppercase tracking-[0.24em] text-charcoal/44">Before & After</p>
-            <h2 className="mt-3 max-w-2xl text-4xl font-normal leading-[1.04] text-charcoal md:text-5xl">
-              Kitchen transformation with a calmer, more elevated material story.
-            </h2>
           </div>
 
           <div className="grid gap-8 md:grid-cols-2">
