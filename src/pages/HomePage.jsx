@@ -162,15 +162,15 @@ function HomePage() {
               className="feature-card group relative overflow-hidden rounded-[1.5rem] md:col-span-8 md:row-span-2"
             >
               <CuratedImage
-                src="/KitchenAfter.jpeg"
+                src="/whitebalcony.avif"
                 fallback="/livingroom1.jpeg"
-                alt="Completed living room with warm layered styling and balanced finishes"
+                alt="Calm white balcony interior with airy outdoor living and soft neutral styling"
                 className="feature-image absolute inset-0 h-full w-full object-cover focal-portfolio-main"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/38 via-black/8 to-transparent" />
               <div className="absolute bottom-0 left-0 p-6 md:p-8">
-                <p className="text-[0.66rem] font-semibold uppercase tracking-[0.2em] text-white/74">Signature Transformation</p>
-                <p className="mt-2 max-w-sm text-lg leading-relaxed text-white/88 md:text-xl">A calm kitchen reimagined through tone, material, and light.</p>
+                <p className="text-[0.66rem] font-semibold uppercase tracking-[0.2em] text-white/74">Signature Space</p>
+                <p className="mt-2 max-w-sm text-lg leading-relaxed text-white/88 md:text-xl">Calm outdoor living shaped through texture, tone, and light.</p>
               </div>
             </Link>
 
@@ -188,12 +188,18 @@ function HomePage() {
               className="feature-card group relative overflow-hidden rounded-[1.5rem] md:col-span-4 md:row-span-1"
             >
               <CuratedImage
-                src="/whitebalcony.avif"
-                fallback="/bedroom1.jpeg"
-                alt="Bright balcony interior with serene neutral styling"
+                src="/bluewallpaper.jpeg"
+                fallback="/naturalwallpaper.jpeg"
+                alt="Blue wallpaper detail showing layered finishes and refined material texture"
                 className="feature-image absolute inset-0 h-full w-full object-cover focal-portfolio-detail"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/26 via-transparent to-transparent" />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/36 via-transparent to-transparent" />
+              <div className="absolute bottom-0 left-0 p-5 md:p-6">
+                <p className="text-[0.66rem] font-semibold uppercase tracking-[0.18em] text-white/74">Material Detail</p>
+                <p className="mt-2 max-w-[16rem] text-sm leading-relaxed text-white/84 md:text-[0.98rem]">
+                  Layered finishes and tactile pattern bring depth to a quieter palette.
+                </p>
+              </div>
             </Link>
           </div>
         </div>
