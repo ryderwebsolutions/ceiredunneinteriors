@@ -24,7 +24,7 @@ function Layout() {
               <div className="hidden min-w-0 md:block">
                 <p className="text-[0.72rem] uppercase tracking-[0.28em] text-charcoal/45">Interior Design Studio</p>
                 <p
-                  className="text-[1.25rem] leading-none text-charcoal"
+                  className="text-[1.36rem] leading-none text-charcoal"
                   style={{ fontFamily: '"Cormorant Garamond", Georgia, serif' }}
                 >
                   Céire Dunne Interiors
@@ -38,7 +38,7 @@ function Layout() {
                   key={link.path}
                   to={link.path}
                   className={({ isActive }) =>
-                    `text-sm tracking-[0.14em] text-charcoal/72 transition hover:text-charcoal ${isActive ? activeClass : ""}`
+                    `text-[0.72rem] font-semibold uppercase tracking-[0.18em] text-charcoal/72 transition hover:text-charcoal ${isActive ? activeClass : ""}`
                   }
                 >
                   {link.label}
@@ -74,7 +74,7 @@ function Layout() {
                   to={link.path}
                   onClick={() => setOpen(false)}
                   className={({ isActive }) =>
-                    `rounded-2xl px-4 py-3 text-sm tracking-[0.12em] text-charcoal/75 transition hover:bg-paper-white hover:text-charcoal ${
+                    `rounded-2xl px-4 py-3 text-[0.74rem] font-semibold uppercase tracking-[0.17em] text-charcoal/75 transition hover:bg-paper-white hover:text-charcoal ${
                       isActive ? "bg-paper-white text-charcoal" : ""
                     }`
                   }
