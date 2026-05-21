@@ -108,6 +108,55 @@ li {
   filter: saturate(102%);
 }
 
+.focal-hero {
+  object-position: 56% 52%;
+}
+
+.service-focal-1 {
+  object-position: 50% 52%;
+}
+
+.service-focal-2 {
+  object-position: 52% 52%;
+}
+
+.service-focal-3 {
+  object-position: 50% 46%;
+}
+
+.service-focal-4 {
+  object-position: 52% 42%;
+}
+
+.service-focal-5 {
+  object-position: 50% 54%;
+}
+
+.service-focal-6 {
+  object-position: 50% 52%;
+}
+
+.focal-portfolio-main {
+  object-position: 52% 54%;
+}
+
+.focal-portfolio-bedroom {
+  object-position: 48% 48%;
+}
+
+.focal-portfolio-wallpaper {
+  object-position: 50% 44%;
+}
+
+.focal-kitchen-before {
+  object-position: 50% 52%;
+}
+
+.focal-kitchen-after,
+.focal-consultation {
+  object-position: 50% 52%;
+}
+
 .bg-linen\/45,
 .bg-cream\/45,
 .bg-white\/78,
@@ -193,6 +242,43 @@ li {
   .feature-card,
   .feature-frame {
     box-shadow: 0 18px 40px rgba(60, 46, 37, 0.08);
+  }
+
+  .focal-hero {
+    object-position: 62% 50%;
+  }
+
+  .service-focal-2 {
+    object-position: 58% 52%;
+  }
+
+  .service-focal-3 {
+    object-position: 54% 42%;
+  }
+
+  .service-focal-4 {
+    object-position: 56% 40%;
+  }
+
+  .focal-portfolio-main {
+    object-position: 58% 54%;
+  }
+
+  .focal-portfolio-bedroom {
+    object-position: 56% 48%;
+  }
+
+  .focal-portfolio-wallpaper {
+    object-position: 56% 42%;
+  }
+
+  .focal-kitchen-before {
+    object-position: 58% 50%;
+  }
+
+  .focal-kitchen-after,
+  .focal-consultation {
+    object-position: 54% 50%;
   }
 }
 
