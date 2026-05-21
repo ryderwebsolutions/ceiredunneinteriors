@@ -15,6 +15,10 @@
   --charcoal: #3f3933;
 }
 
+#root {
+  min-height: 100vh;
+}
+
 html {
   scroll-behavior: smooth;
 }
@@ -23,7 +27,9 @@ body {
   margin: 0;
   font-family: "DM Sans", "Segoe UI", sans-serif;
   color: var(--charcoal);
-  background: var(--paper-white);
+  background:
+    radial-gradient(circle at top left, rgba(232, 223, 210, 0.7), transparent 24%),
+    linear-gradient(180deg, #fbf7f1 0%, #fffdf9 38%, #f5efe7 100%);
   line-height: 1.6;
 }
 
@@ -65,6 +71,30 @@ h4 {
   box-shadow: 0 16px 34px rgba(70, 54, 44, 0.06);
 }
 
+.feature-frame,
+.feature-card {
+  border: 1px solid rgba(63, 57, 51, 0.06);
+  box-shadow: 0 24px 60px rgba(60, 46, 37, 0.11);
+}
+
+.feature-card {
+  display: block;
+  isolation: isolate;
+}
+
+.feature-image {
+  transition: transform 900ms cubic-bezier(0.2, 0.7, 0.2, 1), filter 900ms ease;
+  filter: saturate(96%);
+}
+
+.feature-frame:hover .feature-image,
+.feature-card:hover .feature-image,
+.feature-frame:focus-within .feature-image,
+.feature-card:focus-within .feature-image {
+  transform: scale(1.04);
+  filter: saturate(102%);
+}
+
 .bg-linen\/45,
 .bg-cream\/45,
 .bg-white\/78,
@@ -97,7 +127,9 @@ h4 {
 
 @media (max-width: 768px) {
   body {
-    background: var(--paper-white);
+    background:
+      radial-gradient(circle at top left, rgba(232, 223, 210, 0.55), transparent 28%),
+      linear-gradient(180deg, #fbf7f1 0%, #fffdf9 44%, #f5efe7 100%);
   }
 
   .soft-card,
@@ -143,6 +175,11 @@ h4 {
 
   .photo-curve {
     border-radius: 18px;
+  }
+
+  .feature-card,
+  .feature-frame {
+    box-shadow: 0 18px 40px rgba(60, 46, 37, 0.08);
   }
 }
 

@@ -48,301 +48,150 @@ function HomePage() {
             <PrimaryButton to="/contact">Book A Consultation</PrimaryButton>
             <SecondaryButton to="/portfolio">View Portfolio</SecondaryButton>
           </div>
-        </div>
 
         <div className="relative min-h-[420px] md:min-h-[500px]">
-          <img
-            src={wallpaperPaintImage}
-            alt="Botanical wallpaper and sage paint chip selection for an Irish home"
-            className="photo-curve absolute right-0 top-1 h-56 w-44 object-cover object-center shadow-soft md:h-80 md:w-64"
-          />
-          <img
-            src={colourFanDeckImage}
-            alt="Interior designer reviewing colour fan deck and material samples"
-            className="photo-curve absolute bottom-8 left-0 h-64 w-52 object-cover object-center shadow-soft md:h-[22rem] md:w-72"
-          />
-          <div className="organic-shape absolute -bottom-2 right-8 h-24 w-24 bg-roseclay/35" aria-hidden="true" />
-          <div className="organic-shape absolute left-24 top-0 h-16 w-16 bg-eucalyptus/35" aria-hidden="true" />
-        </div>
+        import { homepageFeatures } from "../data/siteContent";
+
+        const heroImage = "/livingroom2.jpeg";
+        const consultationImage = "/KitchenAfter.jpeg";
+        const materialsImage = "/textiles.jpeg";
+        const paletteImage = "/aestheticimage.jpeg";
       </Reveal>
 
-      <Reveal as="section" className="mx-auto max-w-7xl px-5 py-20 md:px-8 md:py-24" delay={90} duration={900}>
-        <SectionHeading
-          eyebrow="Featured Services"
-          title="Thoughtful support for every room"
-          intro="Flexible consultation services designed to feel clear, personal, and genuinely useful."
-        />
-        <div className="mt-10 grid gap-6 md:grid-cols-2 lg:grid-cols-4">
-          {featuredServices.map((service, index) => (
-            <Reveal
-              key={service.title}
-              as="article"
-              className="soft-card rounded-3xl border border-walnut/10 p-6 shadow-soft"
-              delay={160 + index * 70}
-              duration={820}
-              distance={16}
-            >
-              <h3 className="text-2xl text-charcoal">{service.title}</h3>
-              <p className="mt-2 text-charcoal/80">{service.text}</p>
             </Reveal>
           ))}
-        </div>
-        <div className="mt-8 grid gap-4 md:grid-cols-3 md:gap-6">
-          {[
-            {
-              src: heritagePaintsImage,
-              label: "Colour Selection",
-              alt: "Heritage paint colours paired with botanical wallpaper for a client project",
-            },
-            {
-              src: tealFabricsImage,
-              label: "Materials & Texture",
-              alt: "Teal geometric fabric and textured samples chosen for material direction",
-            },
-            {
-              src: paletteImage,
-              label: "Palette Planning",
-              alt: "Curated paint palette cards organised for a colour consultation",
-            },
-          ].map((item) => (
-            <figure key={item.label} className="space-y-2">
-              <img src={item.src} alt={item.alt} className="photo-curve h-44 w-full object-cover object-center shadow-soft" />
-              <figcaption className="text-xs uppercase tracking-[0.16em] text-charcoal/70">{item.label}</figcaption>
-            </figure>
-          ))}
-        </div>
-      </Reveal>
+              <Reveal as="section" className="px-5 pb-12 pt-6 md:px-8 md:pb-20 md:pt-8" threshold={0.1}>
+                <div className="mx-auto grid max-w-7xl gap-8 lg:grid-cols-[1.05fr_1.2fr] lg:items-end">
+                  <div className="order-2 flex max-w-xl flex-col justify-end lg:order-1 lg:pb-10">
+                    <p className="text-xs font-medium uppercase tracking-[0.24em] text-charcoal/44">Céire Dunne Interiors</p>
+                    <h1 className="mt-4 text-[3.2rem] font-normal leading-[0.94] text-charcoal sm:text-[4.3rem] md:text-[5.6rem]">
+                      Quiet luxury for homes that want to feel deeply considered.
+                    </h1>
+                    <p className="mt-6 max-w-lg text-base leading-relaxed text-charcoal/68 md:text-lg">
+                      A calm design studio shaping warm, elevated interiors through colour, material direction, and refined styling.
+                    </p>
+                    <div className="mt-8 flex flex-wrap gap-3">
+                      <PrimaryButton to="/contact">Book Consultation</PrimaryButton>
+                      <SecondaryButton to="/portfolio">View Portfolio</SecondaryButton>
+                    </div>
+                  </div>
 
-      <Reveal as="section" className="mx-auto grid max-w-7xl gap-10 px-5 py-20 md:grid-cols-2 md:px-8 md:py-24" delay={190} duration={900}>
-        <div className="editorial-panel rounded-3xl p-8 md:p-11">
-          <SectionHeading
-            eyebrow="Design Philosophy"
-            title="Creative guidance, never intimidating"
-            intro="Every recommendation is grounded in how your rooms are used, how your light changes through the day, and what will age beautifully over time."
-          />
-          <ul className="mt-6 space-y-3">
-            {reasons.map((item) => (
-              <li key={item} className="rounded-2xl bg-white/78 px-4 py-3 text-charcoal/82 shadow-soft">
-                {item}
-              </li>
-            ))}
-          </ul>
-        </div>
-        <img
-          src={colourChartsImage}
-          alt="Colour chart books and wallpaper samples spread during a home consultation"
-          className="photo-curve h-full min-h-[280px] w-full object-cover object-[45%_62%] shadow-soft md:min-h-[320px]"
-        />
-      </Reveal>
+                  <div className="order-1 grid gap-4 lg:order-2 lg:grid-cols-[1.15fr_0.72fr]">
+                    <figure className="feature-frame group relative min-h-[27rem] overflow-hidden rounded-[2rem] bg-[#e8dfd2] md:min-h-[38rem]">
+                      <img
+                        src={heroImage}
+                        alt="Warm neutral living room with layered textures and understated styling"
+                        className="feature-image absolute inset-0 h-full w-full object-cover object-center"
+                      />
+                      <div className="absolute inset-0 bg-gradient-to-t from-black/30 via-black/5 to-transparent" />
+                      <figcaption className="absolute bottom-0 left-0 right-0 p-6 md:p-8">
+                        <p className="text-xs uppercase tracking-[0.24em] text-white/72">Editorial interior design</p>
+                        <p className="mt-3 max-w-sm text-lg leading-relaxed text-white/88 md:text-xl">
+                          Spacious, tactile rooms with a restrained palette and a quietly luxurious finish.
+                        </p>
+                      </figcaption>
+                    </figure>
 
-      <Reveal as="section" className="mx-auto max-w-7xl px-5 py-16 md:px-8 md:py-20" delay={230} duration={880}>
-        <SectionHeading
-          eyebrow="The Process"
-          title="How it works"
-          intro="A calm, personal process designed around your home, your style, and your life."
-        />
-        <ol className="mt-12 grid list-none gap-10 p-0 md:grid-cols-4 md:gap-8">
-          {[
-            {
-              n: "01",
-              title: "Initial Enquiry",
-              text: "Tell Céire about your room, your style, and what you need help with. No jargon, no pressure.",
-            },
-            {
-              n: "02",
-              title: "Consultation",
-              text: "Discuss colour, layout, finishes, furniture, and practical design options at your own pace.",
-            },
-            {
-              n: "03",
-              title: "Design Direction",
-              text: "Receive clear guidance, moodboard ideas, colour suggestions, and tailored styling recommendations.",
-            },
-            {
-              n: "04",
-              title: "Confident Next Steps",
-              text: "Move forward with a calmer, clearer vision and a simple, practical plan for your home.",
-            },
-          ].map((step) => (
-            <li key={step.n}>
-              <span
-                className="block font-normal leading-none text-sage/20"
-                style={{ fontFamily: '"Cormorant Garamond", Georgia, serif', fontSize: "5rem" }}
-                aria-hidden="true"
-              >
-                {step.n}
-              </span>
-              <h3
-                className="mt-3 text-xl font-normal text-charcoal"
-                style={{ fontFamily: '"Cormorant Garamond", Georgia, serif' }}
-              >
-                {step.title}
-              </h3>
-              <p className="mt-2 text-sm leading-relaxed text-charcoal/65">{step.text}</p>
-            </li>
-          ))}
-        </ol>
-      </Reveal>
+                    <div className="grid gap-4">
+                      <figure className="feature-frame group relative min-h-[13rem] overflow-hidden rounded-[2rem] bg-[#eee5db]">
+                        <img
+                          src={paletteImage}
+                          alt="Interior materials and colour palette arranged for a consultation"
+                          className="feature-image absolute inset-0 h-full w-full object-cover object-center"
+                        />
+                        <div className="absolute inset-0 bg-gradient-to-t from-black/22 to-transparent" />
+                        <figcaption className="absolute bottom-0 left-0 p-5 text-sm uppercase tracking-[0.2em] text-white/82">Colour & material direction</figcaption>
+                      </figure>
 
-      <Reveal as="section" className="mx-auto max-w-7xl px-5 py-20 md:px-8 md:py-24" delay={270} duration={900}>
-        <SectionHeading
-          eyebrow="Kitchen Transformation"
-          title="A calm, confident before and after"
-          intro="A visual story of how finishes, tone, and styling decisions reshape the feeling of a room without losing practicality."
-        />
-        <div className="mt-10 grid gap-6 rounded-[2rem] border border-walnut/10 bg-white/84 p-5 shadow-soft md:grid-cols-2 md:p-7">
-          <figure className="space-y-3">
-            <img
-              src={kitchenBeforeImage}
+                      <figure className="grid min-h-[13rem] gap-4 sm:grid-cols-2 lg:grid-cols-1 xl:grid-cols-2">
+                        <img
+                          src={materialsImage}
+                          alt="Textural samples in warm neutral tones"
+                          className="photo-curve h-full min-h-[13rem] w-full object-cover object-center shadow-soft"
+                        />
+                        <img
+                          src={consultationImage}
+                          alt="Refined kitchen interior with calm materials and soft natural light"
+                          className="photo-curve h-full min-h-[13rem] w-full object-cover object-center shadow-soft"
+                        />
+                      </figure>
+                    </div>
+                  </div>
+                </div>
+              </Reveal>
+
+              <Reveal as="section" className="px-5 py-12 md:px-8 md:py-16" delay={80} duration={900}>
+                <div className="mx-auto grid max-w-7xl gap-4 md:grid-cols-2">
+                  {homepageFeatures.map((feature, index) => (
+                    <a
+                      key={feature.title}
+                      href={feature.path}
+                      className="feature-card group relative min-h-[27rem] overflow-hidden rounded-[2rem] md:min-h-[34rem]"
+                      style={{ transitionDelay: `${index * 40}ms` }}
+                    >
+                      <img src={feature.image} alt={feature.alt} className="feature-image absolute inset-0 h-full w-full object-cover object-center" />
+                      <div className="absolute inset-0 bg-gradient-to-t from-black/54 via-black/16 to-transparent transition duration-500 group-hover:from-black/62" />
+                      <div className="absolute inset-x-0 bottom-0 flex items-end justify-between gap-4 p-6 md:p-8">
+                        <div>
+                          <p className="text-xs uppercase tracking-[0.24em] text-white/70">{feature.eyebrow}</p>
+                          <h2 className="mt-3 max-w-xs text-4xl font-normal leading-[1.02] text-white md:text-5xl">{feature.title}</h2>
+                          <p className="mt-3 max-w-sm text-sm leading-relaxed text-white/78 md:text-base">{feature.text}</p>
+                        </div>
+                        <span className="inline-flex h-12 w-12 items-center justify-center rounded-full border border-white/30 bg-white/10 text-lg text-white transition duration-500 group-hover:translate-x-1 group-hover:bg-white/18">
+                          +
+                        </span>
+                      </div>
+                    </a>
+                  ))}
+                </div>
+              </Reveal>
+
+              <Reveal as="section" className="px-5 py-14 md:px-8 md:py-20" delay={130} duration={880}>
+                <div className="mx-auto grid max-w-7xl gap-8 rounded-[2rem] bg-[#f1e9df] p-6 md:grid-cols-[0.95fr_1.05fr] md:p-8 lg:p-10">
+                  <div>
+                    <p className="text-xs uppercase tracking-[0.24em] text-charcoal/42">Studio approach</p>
+                    <h2 className="mt-3 max-w-md text-4xl font-normal leading-[1.04] text-charcoal md:text-5xl">
+                      Minimal, tactile and designed to feel effortless.
+                    </h2>
+                  </div>
+                  <div className="grid gap-6 md:grid-cols-2">
+                    {[
+                      "Large visual gestures supported by quiet, practical detail.",
+                      "Material palettes chosen for softness, cohesion, and longevity.",
+                      "Layouts refined to feel calmer, lighter, and more generous.",
+                      "Consultation-led guidance tailored to the way each home is actually lived in.",
+                    ].map((item) => (
+                      <p key={item} className="border-t border-charcoal/10 pt-4 text-sm leading-relaxed text-charcoal/70 md:text-base">
+                        {item}
+                      </p>
+                    ))}
+                  </div>
+                </div>
+              </Reveal>
+
+              <Reveal as="section" className="px-5 pb-20 pt-8 md:px-8 md:pb-28 md:pt-12" delay={190} duration={860}>
+                <div className="mx-auto grid max-w-7xl gap-8 rounded-[2.3rem] border border-charcoal/8 bg-white/72 p-6 shadow-soft md:grid-cols-[1.1fr_0.9fr] md:p-8 lg:p-10">
+                  <div className="flex flex-col justify-between">
+                    <div>
+                      <p className="text-xs uppercase tracking-[0.24em] text-charcoal/42">Consultation</p>
+                      <h2 className="mt-3 max-w-md text-4xl font-normal leading-[1.05] text-charcoal md:text-5xl">
+                        Book a private consultation for your next interior chapter.
+                      </h2>
+                      <p className="mt-5 max-w-lg text-base leading-relaxed text-charcoal/68">
+                        Share the rooms you want to transform and receive clear, beautifully considered direction on colour, finishes, furnishing, and flow.
+                      </p>
+                    </div>
+                    <div className="mt-8 flex flex-wrap gap-3">
+                      <PrimaryButton to="/contact">Book Consultation</PrimaryButton>
+                      <SecondaryButton to="/services">Explore Services</SecondaryButton>
+                    </div>
+                  </div>
+
+                  <img
+                    src={consultationImage}
+                    alt="Elegant neutral kitchen with calm cabinetry and refined finishes"
+                    className="photo-curve h-full min-h-[22rem] w-full object-cover object-center shadow-soft md:min-h-[28rem]"
+                  />
+                </div>
+              </Reveal>
               alt="Kitchen before design transformation"
-              className="photo-curve h-[20rem] w-full object-cover object-[48%_45%] shadow-soft md:h-[440px]"
-            />
-            <figcaption className="space-y-1.5">
-              <p className="text-xs font-semibold uppercase tracking-[0.18em] text-charcoal/55">Before</p>
-              <p className="text-sm leading-relaxed text-charcoal/58">Heavy tones and flat finishes left the room feeling smaller and darker.</p>
-            </figcaption>
-          </figure>
-          <figure className="space-y-3">
-            <img
-              src={kitchenAfterImage}
-              alt="Kitchen after design transformation"
-              className="photo-curve h-[20rem] w-full object-cover object-[50%_48%] shadow-soft md:h-[440px]"
-            />
-            <figcaption className="space-y-1.5">
-              <p className="text-xs font-semibold uppercase tracking-[0.18em] text-sage">After</p>
-              <p className="text-sm leading-relaxed text-charcoal/58">Lighter tones, considered finishes, and cohesive material choices lifted the entire feel of the space.</p>
-            </figcaption>
-          </figure>
-        </div>
-        <p className="mt-5 px-1 text-sm leading-relaxed text-charcoal/58 md:text-center">
-          Small, intentional changes in colour, texture, and finish can completely shift how a space feels — calmer, brighter, and far more considered.
-        </p>
-      </Reveal>
-
-      <Reveal as="section" className="mx-auto max-w-7xl px-5 py-20 md:px-8 md:py-24" delay={360} duration={920}>
-        <div className="texture-wash grid gap-10 rounded-[2rem] border border-walnut/10 p-8 md:grid-cols-2 md:p-12">
-          <div>
-            <p className="text-xs font-semibold uppercase tracking-[0.2em] text-sage">Studio Showcase</p>
-            <h2 className="mt-2 text-4xl font-normal text-charcoal md:text-5xl">Project walk-through in motion</h2>
-            <p className="mt-4 text-charcoal/76">
-              A short portfolio clip that captures material warmth, lighting, and spatial flow in context.
-            </p>
-            <div className="mt-7 grid grid-cols-2 gap-3">
-              <img
-                src={textileImage}
-                alt="Layered fabric and textile samples for a soft interior scheme"
-                className="photo-curve h-24 w-full object-cover object-center shadow-soft md:h-28"
-              />
-              <img
-                src={wallpaperPaintImage}
-                alt="Botanical wallpaper and sage paint chip pairing"
-                className="photo-curve h-24 w-full object-cover object-center shadow-soft md:h-28"
-              />
-            </div>
-            <button
-              type="button"
-              onClick={toggleVideo}
-              className="mt-7 inline-flex items-center justify-center rounded-2xl border border-walnut/18 bg-white/90 px-6 py-3 text-sm font-medium tracking-[0.08em] text-charcoal shadow-soft transition hover:bg-cream/80"
-            >
-              {isVideoPlaying ? "Pause Video" : "Play Video"}
-            </button>
-          </div>
-            <div className="overflow-hidden rounded-[1.5rem] border border-walnut/12 shadow-soft">
-            <video
-              ref={videoRef}
-              src={projectVideo}
-              autoPlay
-              muted
-              loop
-              playsInline
-              preload="metadata"
-              className="h-full min-h-[240px] w-full object-cover md:min-h-[300px]"
-            />
-          </div>
-        </div>
-      </Reveal>
-
-      <Reveal as="section" className="mx-auto max-w-7xl px-5 py-20 md:px-8 md:py-24" delay={440} duration={860}>
-        <SectionHeading
-          eyebrow="Studio Work"
-          title="Colour, material, and considered detail"
-          intro="Every palette, fabric choice, and finish selection is made with intention — guided by light, lifestyle, and the warmth a room needs."
-        />
-        <div className="mt-10 space-y-4">
-          <div className="grid gap-4 md:grid-cols-[1.65fr_1fr]">
-            <img
-              src={colourFanDeckImage}
-              alt="Interior designer carefully reviewing colour fan deck with material and texture samples"
-              className="photo-curve h-64 w-full object-cover object-center shadow-soft md:h-[440px]"
-            />
-            <div className="flex flex-col gap-4">
-              <img
-                src={heritagePaintsImage}
-                alt="Heritage paint colour cards paired with a sage botanical wallpaper"
-                className="photo-curve w-full flex-1 object-cover object-center shadow-soft"
-                style={{ minHeight: 0 }}
-              />
-              <img
-                src={tealFabricsImage}
-                alt="Teal geometric fabric samples and coordinating colour palette strip"
-                className="photo-curve w-full flex-1 object-cover object-center shadow-soft"
-                style={{ minHeight: 0 }}
-              />
-            </div>
-          </div>
-          <div className="grid grid-cols-3 gap-4">
-            <img
-              src={wallpaperPaintImage}
-              alt="Botanical wallpaper paired with a sage green paint swatch"
-              className="photo-curve h-28 w-full object-cover object-center shadow-soft md:h-44"
-            />
-            <img
-              src={textileImage}
-              alt="Layered fabric and textile samples for a soft, warm interior scheme"
-              className="photo-curve h-28 w-full object-cover object-center shadow-soft md:h-44"
-            />
-            <img
-              src={paletteImage}
-              alt="Curated paint colour palette cards for a residential interior project"
-              className="photo-curve h-28 w-full object-cover object-center shadow-soft md:h-44"
-            />
-          </div>
-        </div>
-      </Reveal>
-
-      <Reveal as="section" className="mx-auto max-w-7xl px-5 py-20 md:px-8 md:py-24" delay={510} duration={820}>
-        <SectionHeading eyebrow="Client Notes" title="What homeowners say" />
-        <div className="mt-8 grid gap-8 md:grid-cols-3 md:gap-10">
-          {testimonials.map((item, index) => (
-            <Reveal
-              key={item.name}
-              as="blockquote"
-              className="border-l-2 border-sage/25 pl-6"
-              delay={560 + index * 65}
-              duration={780}
-              distance={14}
-            >
-              <p className="text-base leading-relaxed text-charcoal/78">"{item.quote}"</p>
-              <cite className="mt-3 block text-xs not-italic uppercase tracking-[0.15em] text-sage">{item.name}</cite>
-            </Reveal>
-          ))}
-        </div>
-      </Reveal>
-
-      <Reveal as="section" className="mx-auto mb-10 max-w-7xl px-5 pb-20 pt-16 md:px-8" delay={650} duration={840}>
-        <div className="rounded-[2rem] border border-walnut/10 bg-white/90 px-8 py-12 text-center shadow-soft md:px-16">
-          <p className="text-xs uppercase tracking-[0.2em] text-sage">Ready To Begin</p>
-          <h2 className="mt-3 text-4xl font-normal text-charcoal md:text-5xl">Let us refresh your home, beautifully and practically</h2>
-          <p className="mx-auto mt-4 max-w-2xl text-charcoal/76">
-            Book a consultation and receive personalised ideas tailored to your home, style, and budget.
-          </p>
-          <PrimaryButton to="/contact" className="mt-8">
-            Book A Consultation
-          </PrimaryButton>
-        </div>
-      </Reveal>
-    </>
-  );
-}
-
-export default HomePage;

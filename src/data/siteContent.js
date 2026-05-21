@@ -1,9 +1,43 @@
 export const navLinks = [
-  { label: "Home", path: "/" },
   { label: "Services", path: "/services" },
   { label: "Portfolio", path: "/portfolio" },
   { label: "About", path: "/about" },
-  { label: "Contact", path: "/contact" },
+  { label: "Consultation", path: "/contact" },
+];
+
+export const homepageFeatures = [
+  {
+    eyebrow: "Services",
+    title: "Services",
+    text: "Consultation-led support for palettes, finishes, furnishing direction, and room flow.",
+    image: "/image-11.jpeg",
+    alt: "Layered interior textiles and styling references arranged in warm neutral tones",
+    path: "/services",
+  },
+  {
+    eyebrow: "Portfolio",
+    title: "Portfolio",
+    text: "Curated residential work focused on calm atmosphere, tactility, and restrained elegance.",
+    image: "/livingroom1.jpeg",
+    alt: "Sophisticated residential living room styled in warm neutral tones",
+    path: "/portfolio",
+  },
+  {
+    eyebrow: "About",
+    title: "About",
+    text: "A personal studio approach grounded in Irish homes, practical beauty, and lasting cohesion.",
+    image: "/naturalwallpaper.jpeg",
+    alt: "Curated wallpaper and paint samples for a premium interior design consultation",
+    path: "/about",
+  },
+  {
+    eyebrow: "Book Consultation",
+    title: "Consultation",
+    text: "Begin with a calm one-to-one enquiry and shape the next phase of your home with confidence.",
+    image: "/KitchenAfter.jpeg",
+    alt: "Refined kitchen interior showing warm cabinetry and premium finishes",
+    path: "/contact",
+  },
 ];
 
 export const featuredServices = [
