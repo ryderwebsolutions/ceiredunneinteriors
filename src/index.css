@@ -31,9 +31,7 @@ body {
   font-size: clamp(0.98rem, 0.36vw + 0.9rem, 1.06rem);
   letter-spacing: 0.003em;
   color: var(--charcoal);
-  background:
-    radial-gradient(circle at top left, rgba(232, 223, 210, 0.7), transparent 24%),
-    linear-gradient(180deg, #fbf7f1 0%, #fffdf9 38%, #f5efe7 100%);
+  background: #ffffff;
   line-height: 1.66;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
@@ -70,7 +68,7 @@ li {
 }
 
 .photo-curve {
-  border-radius: 24px;
+  border-radius: 18px;
   border: 1px solid rgba(108, 80, 64, 0.07);
 }
 
@@ -87,7 +85,7 @@ li {
 .feature-frame,
 .feature-card {
   border: 1px solid rgba(63, 57, 51, 0.06);
-  box-shadow: 0 24px 60px rgba(60, 46, 37, 0.11);
+  box-shadow: 0 16px 34px rgba(60, 46, 37, 0.085);
 }
 
 .feature-card {
@@ -109,7 +107,11 @@ li {
 }
 
 .focal-hero {
-  object-position: 56% 52%;
+  object-position: 50% 56%;
+}
+
+.focal-hero-support {
+  object-position: 50% 48%;
 }
 
 .service-focal-1 {
@@ -117,35 +119,27 @@ li {
 }
 
 .service-focal-2 {
-  object-position: 52% 52%;
+  object-position: 52% 44%;
 }
 
 .service-focal-3 {
-  object-position: 50% 46%;
+  object-position: 50% 44%;
 }
 
 .service-focal-4 {
-  object-position: 52% 42%;
+  object-position: 50% 52%;
 }
 
 .service-focal-5 {
   object-position: 50% 54%;
 }
 
-.service-focal-6 {
+.focal-portfolio-main {
   object-position: 50% 52%;
 }
 
-.focal-portfolio-main {
-  object-position: 52% 54%;
-}
-
-.focal-portfolio-bedroom {
-  object-position: 48% 48%;
-}
-
-.focal-portfolio-wallpaper {
-  object-position: 50% 44%;
+.focal-portfolio-detail {
+  object-position: 50% 50%;
 }
 
 .focal-kitchen-before {
@@ -188,12 +182,6 @@ li {
 }
 
 @media (max-width: 768px) {
-  body {
-    background:
-      radial-gradient(circle at top left, rgba(232, 223, 210, 0.55), transparent 28%),
-      linear-gradient(180deg, #fbf7f1 0%, #fffdf9 44%, #f5efe7 100%);
-  }
-
   .soft-card,
   .editorial-panel,
   .texture-wash,
@@ -241,35 +229,35 @@ li {
 
   .feature-card,
   .feature-frame {
-    box-shadow: 0 18px 40px rgba(60, 46, 37, 0.08);
+    box-shadow: 0 12px 26px rgba(60, 46, 37, 0.07);
   }
 
   .focal-hero {
-    object-position: 62% 50%;
+    object-position: 54% 56%;
+  }
+
+  .focal-hero-support {
+    object-position: 50% 42%;
   }
 
   .service-focal-2 {
-    object-position: 58% 52%;
+    object-position: 54% 44%;
   }
 
   .service-focal-3 {
-    object-position: 54% 42%;
+    object-position: 54% 40%;
   }
 
   .service-focal-4 {
-    object-position: 56% 40%;
+    object-position: 52% 52%;
   }
 
   .focal-portfolio-main {
-    object-position: 58% 54%;
+    object-position: 54% 52%;
   }
 
-  .focal-portfolio-bedroom {
-    object-position: 56% 48%;
-  }
-
-  .focal-portfolio-wallpaper {
-    object-position: 56% 42%;
+  .focal-portfolio-detail {
+    object-position: 54% 50%;
   }
 
   .focal-kitchen-before {

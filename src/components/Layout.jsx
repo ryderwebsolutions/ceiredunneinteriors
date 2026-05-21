@@ -4,27 +4,32 @@ import { PrimaryButton } from "./Buttons";
 import { navLinks } from "../data/siteContent";
 
 const activeClass = "text-walnut";
-const studioLogo = "/ceiredunneinteriorslogo.jpg";
+const studioLogo = "/ceiredunneinteriorslogo-removebg-preview.png";
+const fallbackLogo = "/ceiredunneinteriorslogo.jpg";
 
 function Layout() {
   const [open, setOpen] = useState(false);
   const location = useLocation();
 
   return (
-    <div className="min-h-screen bg-paper-white text-charcoal">
-      <header className="sticky top-0 z-50 px-4 pt-4 md:px-6">
-        <div className="mx-auto max-w-7xl rounded-full border border-white/65 bg-paper-white/88 px-4 py-3 shadow-soft backdrop-blur-xl md:px-6">
-          <div className="grid grid-cols-[auto_1fr_auto] items-center gap-3 md:gap-6">
-            <Link to="/" className="flex items-center gap-3" aria-label="Céire Dunne Interiors home" onClick={() => setOpen(false)}>
+    <div className="min-h-screen bg-white text-charcoal">
+      <header className="sticky top-0 z-50 px-3 pt-3 md:px-6 md:pt-4">
+        <div className="mx-auto max-w-7xl rounded-[2rem] border border-charcoal/8 bg-white/92 px-3 py-2.5 shadow-soft backdrop-blur-xl md:rounded-full md:px-6 md:py-3">
+          <div className="grid grid-cols-[1fr_auto] items-center gap-2 md:grid-cols-[auto_1fr_auto] md:gap-6">
+            <Link to="/" className="flex min-w-0 items-center gap-2.5 pr-1 md:gap-3" aria-label="Céire Dunne Interiors home" onClick={() => setOpen(false)}>
               <img
                 src={studioLogo}
                 alt="Céire Dunne Interiors logo"
-                className="h-11 w-auto object-contain md:h-12"
+                className="h-14 w-auto shrink-0 object-contain md:h-12"
+                onError={(event) => {
+                  event.currentTarget.onerror = null;
+                  event.currentTarget.src = fallbackLogo;
+                }}
               />
-              <div className="hidden min-w-0 md:block">
-                <p className="text-[0.72rem] uppercase tracking-[0.28em] text-charcoal/45">Interior Design Studio</p>
+              <div className="min-w-0">
+                <p className="hidden text-[0.68rem] uppercase tracking-[0.24em] text-charcoal/45 md:block">Interior Design Studio</p>
                 <p
-                  className="text-[1.36rem] leading-none text-charcoal"
+                  className="truncate whitespace-nowrap text-[1.06rem] leading-none text-charcoal md:text-[1.36rem]"
                   style={{ fontFamily: '"Cormorant Garamond", Georgia, serif' }}
                 >
                   Céire Dunne Interiors
@@ -52,7 +57,7 @@ function Layout() {
               </PrimaryButton>
               <button
                 type="button"
-                className="inline-flex h-11 w-11 items-center justify-center rounded-full border border-charcoal/12 bg-white/82 text-sm text-charcoal shadow-soft transition hover:bg-white md:hidden"
+                className="inline-flex h-10 w-10 items-center justify-center rounded-full border border-charcoal/12 bg-white/86 text-[0.7rem] font-semibold uppercase tracking-[0.12em] text-charcoal shadow-soft transition hover:bg-white md:hidden"
                 onClick={() => setOpen((prev) => !prev)}
                 aria-expanded={open}
                 aria-controls="mobile-nav"
@@ -67,7 +72,7 @@ function Layout() {
             id="mobile-nav"
             className={`overflow-hidden transition-all duration-400 md:hidden ${open ? "max-h-[420px] pt-4" : "max-h-0 pt-0"}`}
           >
-            <nav className="grid gap-2 rounded-[1.75rem] border border-charcoal/8 bg-white/82 p-4" aria-label="Mobile navigation">
+            <nav className="grid gap-2 rounded-[1.75rem] border border-charcoal/8 bg-white p-4" aria-label="Mobile navigation">
               {navLinks.map((link) => (
                 <NavLink
                   key={link.path}
@@ -94,13 +99,17 @@ function Layout() {
         <Outlet />
       </main>
 
-      <footer className="mt-24 border-t border-charcoal/10 bg-[#f5efe5]">
-        <div className="mx-auto grid max-w-7xl gap-8 px-5 py-14 md:grid-cols-[1.2fr_1fr_1fr] md:px-8">
+      <footer className="mt-28 bg-white">
+        <div className="mx-auto grid max-w-7xl gap-10 px-5 py-16 md:grid-cols-[1.2fr_1fr_1fr] md:px-8 md:py-20">
           <div>
             <img
               src={studioLogo}
               alt="Céire Dunne Interiors logo"
               className="h-14 w-auto max-w-[230px] object-contain"
+              onError={(event) => {
+                event.currentTarget.onerror = null;
+                event.currentTarget.src = fallbackLogo;
+              }}
             />
             <p className="mt-4 max-w-sm text-sm leading-relaxed text-charcoal/68">
               Calm, tailored interiors with an editorial eye for material warmth, spatial flow, and understated luxury.
