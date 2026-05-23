@@ -1,6 +1,7 @@
 import SectionHeading from "../components/SectionHeading";
 import { PrimaryButton } from "../components/Buttons";
 import Reveal from "../components/Reveal";
+import { Link } from "react-router-dom";
 import { services } from "../data/siteContent";
 
 const paletteImage = "/colour%20palette.jpeg";
@@ -12,8 +13,8 @@ function ServicesPage() {
       <Reveal threshold={0.1}>
         <SectionHeading
           eyebrow="Services"
-          title="Practical interior support, tailored to your home"
-          intro="Every session is personal, collaborative, and shaped around real life in Irish homes."
+          title="Consultation-led interior services"
+          intro="A curated offering focused on colour, layout, and tailored design direction for your home."
         />
       </Reveal>
       <Reveal className="mt-10 grid gap-6 md:grid-cols-2" delay={130} duration={830}>
@@ -21,6 +22,14 @@ function ServicesPage() {
           <article key={service.title} className="soft-card rounded-3xl p-7 shadow-soft">
             <h3 className="text-3xl font-normal text-charcoal">{service.title}</h3>
             <p className="mt-3 text-charcoal/76">{service.detail}</p>
+            {service.path !== "/services" ? (
+              <Link
+                to={service.path}
+                className="mt-5 inline-flex text-[0.72rem] font-semibold uppercase tracking-[0.18em] text-charcoal/68 transition hover:text-charcoal"
+              >
+                View Service
+              </Link>
+            ) : null}
           </article>
         ))}
       </Reveal>

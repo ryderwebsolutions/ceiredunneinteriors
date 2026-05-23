@@ -13,25 +13,18 @@ const kitchenAfterImage = "/KitchenAfter.jpeg";
 
 const servicePanels = [
   {
-    title: "Colour Consultation",
-    path: "/services",
+    title: "Colour Consultancy & Wall Coverings",
+    path: "/services/colour-consultancy-wall-coverings",
     image: "/aestheticimage.jpeg",
     fallback: "/colourpalette2.jpeg",
     alt: "Curated colour consultation board with paint fan decks and samples",
   },
   {
-    title: "Interior Styling",
-    path: "/services",
+    title: "Design Consultation",
+    path: "/services/design-consultation",
     image: "/bedroom.avif",
     fallback: "/bedroom2.jpeg",
     alt: "Elegant bedroom interior styled in warm neutral layers",
-  },
-  {
-    title: "Material & Finish Selection",
-    path: "/services",
-    image: "/naturalwallpaper.jpeg",
-    fallback: "/textiles.jpeg",
-    alt: "Wallpaper and finish selections in warm neutral tones",
   },
   {
     title: "Space Planning",
@@ -39,13 +32,6 @@ const servicePanels = [
     image: "/livingroom3.jpeg",
     fallback: "/livingroom2.jpeg",
     alt: "Interior layout with calm spatial flow and balanced arrangement",
-  },
-  {
-    title: "Home Refresh Consultation",
-    path: "/services",
-    image: "/naturallightkitchen.jpg",
-    fallback: "/KitchenAfter.jpeg",
-    alt: "Kitchen interior with soft natural light and refined finishes",
   },
 ];
 
@@ -117,7 +103,7 @@ function HomePage() {
             <p className="text-xs uppercase tracking-[0.24em] text-charcoal/44">Services</p>
           </div>
 
-          <div className="grid gap-5 md:grid-cols-2">
+          <div className="grid gap-5 md:grid-cols-2 lg:grid-cols-3">
             {servicePanels.map((service, index) => (
               <Link
                 key={service.title}

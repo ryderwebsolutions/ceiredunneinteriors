@@ -137,11 +137,9 @@ function ContactPage() {
                 <option value="" disabled>
                   Select a service
                 </option>
-                <option>Colour Consultation</option>
-                <option>Room Refresh Advice</option>
-                <option>Home Styling Guidance</option>
-                <option>Layout & Decor Suggestions</option>
-                <option>Interior Inspiration Planning</option>
+                <option>Colour Consultancy & Wall Coverings</option>
+                <option>Design Consultation</option>
+                <option>Space Planning</option>
               </select>
             </label>
 

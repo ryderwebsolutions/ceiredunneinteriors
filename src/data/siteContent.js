@@ -42,53 +42,37 @@ export const homepageFeatures = [
 
 export const featuredServices = [
   {
-    title: "Colour Consultation",
-    text: "Find a palette that flatters your light, your home style, and your day-to-day life.",
+    title: "Colour Consultancy & Wall Coverings",
+    text: "A guided palette and wall covering direction tailored to your lighting, finishes, and lifestyle.",
   },
   {
-    title: "Interior Advice",
-    text: "Practical guidance to make each room feel more cohesive, comfortable, and complete.",
+    title: "Design Consultation",
+    text: "Personal, room-specific design direction for layout, colour, soft furnishings, and accessories.",
   },
   {
-    title: "Home Styling",
-    text: "Layer texture, lighting, and personality without overbuying or overcomplicating.",
-  },
-  {
-    title: "Space Refresh",
-    text: "Small, smart changes that lift your home quickly and affordably.",
+    title: "Space Planning",
+    text: "Clear layout guidance to improve flow, comfort, and everyday function in your home.",
   },
 ];
 
 export const services = [
   {
-    title: "Colour Consultation",
+    title: "Colour Consultancy & Wall Coverings",
     detail:
-      "A personalised colour plan for your room or full home, considering natural light, existing finishes, and mood.",
+      "With so many colours and wall coverings to choose from, it can feel overwhelming. This is where a home colour consultation comes in. We look at your lighting from natural to artificial. I will bring paint swatches and wallpaper books.",
+    path: "/services/colour-consultancy-wall-coverings",
   },
   {
-    title: "Room Refresh Advice",
+    title: "Design Consultation",
     detail:
-      "Ideal if a room feels flat or unfinished. We refine what is already there and suggest high-impact updates.",
+      "If you have just moved into your new home or simply want to refresh your space, this service is ideal if you do not know where to begin. We will help with room layout, colour, soft furnishings, and accessories. We offer a design board and shopping list. This design service will be tailored to your home’s needs.",
+    path: "/services/design-consultation",
   },
   {
-    title: "Home Styling Guidance",
+    title: "Space Planning",
     detail:
-      "Support with accessories, textiles, art, and layout details to create a home that feels lived-in and elevated.",
-  },
-  {
-    title: "Layout & Decor Suggestions",
-    detail:
-      "Clear ideas for furniture flow, focal points, and decor placement to improve function and visual balance.",
-  },
-  {
-    title: "Interior Inspiration Planning",
-    detail:
-      "Translate saved ideas into a realistic styling direction that works with your budget and your home.",
-  },
-  {
-    title: "Practical Styling For Irish Homes",
-    detail:
-      "Thoughtful solutions shaped around Irish home layouts, weather, lighting, and everyday family life.",
+      "Focused support to improve room flow, furniture positioning, and practical function while preserving a calm, cohesive aesthetic.",
+    path: "/services",
   },
 ];
 
