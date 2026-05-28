@@ -4,7 +4,7 @@ import Reveal from "../components/Reveal";
 
 const heroImage = "/newimage1.avif";
 const heroImageFallback = "/earthinterior.jpg";
-const heroSupportingImage = "/newimage2.avif";
+const heroSupportingImage = "/newnewimage2.avif";
 const heroSupportingFallback = "/sandpillow.jpg";
 const consultationImage = "/naturallightkitchen.jpg";
 const consultationImageFallback = "/livingroom1.jpeg";
