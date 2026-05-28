@@ -23,6 +23,7 @@
 
 html {
   scroll-behavior: smooth;
+  overflow-x: clip;
 }
 
 body {
@@ -35,6 +36,7 @@ body {
   line-height: 1.66;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
+  overflow-x: clip;
 }
 
 h1,
@@ -107,11 +109,11 @@ li {
 }
 
 .focal-hero {
-  object-position: 50% 56%;
+  object-position: 51% 47%;
 }
 
 .focal-hero-support {
-  object-position: 50% 48%;
+  object-position: 50% 44%;
 }
 
 .service-focal-1 {
@@ -233,11 +235,11 @@ li {
   }
 
   .focal-hero {
-    object-position: 54% 56%;
+    object-position: 55% 45%;
   }
 
   .focal-hero-support {
-    object-position: 50% 42%;
+    object-position: 50% 40%;
   }
 
   .service-focal-2 {

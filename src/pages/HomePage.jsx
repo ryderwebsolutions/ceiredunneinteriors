@@ -2,10 +2,10 @@ import { Link } from "react-router-dom";
 import { PrimaryButton, SecondaryButton } from "../components/Buttons";
 import Reveal from "../components/Reveal";
 
-const heroImage = "/earthinterior.jpg";
-const heroImageFallback = "/livingroom2.jpeg";
-const heroSupportingImage = "/sandpillow.jpg";
-const heroSupportingFallback = "/textiles.jpeg";
+const heroImage = "/newimage1.avif";
+const heroImageFallback = "/earthinterior.jpg";
+const heroSupportingImage = "/newimage2.avif";
+const heroSupportingFallback = "/sandpillow.jpg";
 const consultationImage = "/naturallightkitchen.jpg";
 const consultationImageFallback = "/livingroom1.jpeg";
 const kitchenBeforeImage = "/Kitchen%20before.jpeg";
@@ -35,12 +35,21 @@ const servicePanels = [
   },
 ];
 
-function CuratedImage({ src, fallback, alt, className }) {
+function CuratedImage({
+  src,
+  fallback,
+  alt,
+  className,
+  loading = "lazy",
+  decoding = "async",
+}) {
   return (
     <img
       src={src}
       alt={alt}
       className={className}
+      loading={loading}
+      decoding={decoding}
       onError={(event) => {
         if (fallback && event.currentTarget.src !== `${window.location.origin}${fallback}`) {
           event.currentTarget.src = fallback;
@@ -55,7 +64,7 @@ function CuratedImage({ src, fallback, alt, className }) {
 function HomePage() {
   return (
     <>
-      <Reveal as="section" className="px-5 pb-16 pt-8 md:px-8 md:pb-24 md:pt-12" threshold={0.1}>
+      <Reveal as="section" className="px-5 pb-14 pt-7 md:px-8 md:pb-20 md:pt-10 lg:pb-24 lg:pt-12" threshold={0.1}>
         <div className="mx-auto grid max-w-7xl gap-8 lg:grid-cols-[1.02fr_1.22fr] lg:items-end">
           <div className="order-2 flex max-w-xl flex-col justify-end lg:order-1 lg:pb-10">
             <p className="text-xs font-medium uppercase tracking-[0.24em] text-charcoal/44">Céire Dunne Interiors</p>
@@ -74,12 +83,13 @@ function HomePage() {
           </div>
 
           <div className="order-1 grid gap-4 lg:order-2 lg:grid-cols-[1fr_0.44fr] lg:items-end">
-            <figure className="feature-frame relative min-h-[24rem] overflow-hidden rounded-[1.45rem] bg-[#e8dfd2] md:min-h-[38rem]">
+            <figure className="feature-frame relative min-h-[22rem] overflow-hidden rounded-[1.45rem] bg-[#e8dfd2] md:min-h-[36rem] lg:min-h-[38rem]">
               <CuratedImage
                 src={heroImage}
                 fallback={heroImageFallback}
                 alt="Premium interior with warm earthy tones and refined architectural styling"
                 className="absolute inset-0 h-full w-full object-cover focal-hero"
+                loading="eager"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/22 via-black/6 to-transparent" />
             </figure>
@@ -90,6 +100,7 @@ function HomePage() {
                 fallback={heroSupportingFallback}
                 alt="Layered neutral textile and pillow styling detail"
                 className="absolute inset-0 h-full w-full object-cover focal-hero-support"
+                loading="eager"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/14 to-transparent" />
             </figure>
@@ -97,7 +108,7 @@ function HomePage() {
         </div>
       </Reveal>
 
-      <Reveal as="section" className="px-5 py-16 md:px-8 md:py-24" delay={80} duration={900}>
+      <Reveal as="section" className="px-5 py-14 md:px-8 md:py-20 lg:py-24" delay={80} duration={900}>
         <div className="mx-auto max-w-7xl">
           <div className="mb-8 md:mb-10">
             <p className="text-xs uppercase tracking-[0.24em] text-charcoal/44">Services</p>
@@ -127,7 +138,7 @@ function HomePage() {
         </div>
       </Reveal>
 
-      <Reveal as="section" className="px-5 py-16 md:px-8 md:py-24" delay={120} duration={880}>
+      <Reveal as="section" className="px-5 py-14 md:px-8 md:py-20 lg:py-24" delay={120} duration={880}>
         <div className="mx-auto max-w-7xl">
           <div className="mb-8 md:mb-10 flex flex-wrap items-end justify-between gap-4">
             <div>
@@ -188,7 +199,7 @@ function HomePage() {
         </div>
       </Reveal>
 
-      <Reveal as="section" className="px-5 py-16 md:px-8 md:py-24" delay={160} duration={860}>
+      <Reveal as="section" className="px-5 py-14 md:px-8 md:py-20 lg:py-24" delay={160} duration={860}>
         <div className="mx-auto max-w-7xl rounded-[1.6rem] border border-charcoal/8 bg-white p-6 shadow-soft md:p-10">
           <div className="mb-8 md:mb-10">
             <p className="text-xs uppercase tracking-[0.24em] text-charcoal/44">Before & After</p>
@@ -234,7 +245,7 @@ function HomePage() {
         </div>
       </Reveal>
 
-      <Reveal as="section" className="px-5 pb-24 pt-16 md:px-8 md:pb-32 md:pt-24" delay={200} duration={860}>
+      <Reveal as="section" className="px-5 pb-24 pt-14 md:px-8 md:pb-32 md:pt-20 lg:pt-24" delay={200} duration={860}>
         <div className="mx-auto grid max-w-7xl gap-8 rounded-[1.6rem] border border-charcoal/8 bg-white p-6 shadow-soft md:grid-cols-[1.1fr_0.9fr] md:p-8 lg:p-10">
           <div className="flex flex-col justify-between">
             <div>
