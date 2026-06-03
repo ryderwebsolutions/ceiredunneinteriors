@@ -2,7 +2,7 @@ import SectionHeading from "../components/SectionHeading";
 import { PrimaryButton } from "../components/Buttons";
 import Reveal from "../components/Reveal";
 
-const paletteImage = "/colour%20palette.jpeg";
+const ceiraImage = "/cierainterior.jpeg";
 const textileImage = "/textiles.jpeg";
 
 function AboutPage() {
@@ -38,9 +38,9 @@ function AboutPage() {
 
         <div className="relative min-h-[340px] md:min-h-[420px]">
           <img
-            src={paletteImage}
-            alt="Interior stylist material and colour board"
-            className="photo-curve h-full w-full object-cover object-[52%_45%] shadow-soft"
+            src={ceiraImage}
+            alt="Céire Dunne, interior designer"
+            className="photo-curve h-full w-full object-cover object-center shadow-soft"
           />
           <div className="organic-shape absolute -bottom-5 -left-4 h-24 w-24 bg-roseclay/28" aria-hidden="true" />
         </div>
