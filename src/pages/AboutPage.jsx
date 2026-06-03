@@ -16,16 +16,20 @@ function AboutPage() {
             intro="Céire Dunne Interiors helps homeowners create spaces that feel calm, personal, and thoughtfully put together."
           />
           <p className="mt-7 text-lg leading-relaxed text-charcoal/76">
-            Céire believes good interiors should feel approachable and achievable. Her process combines creative direction
-            with practical solutions, so every recommendation is grounded in real life, real homes, and real budgets.
+            I believe a home should feel beautiful, functional, and deeply personal. My passion for interior design
+            comes from helping people create spaces that reflect who they are while bringing comfort and style into
+            everyday life.
           </p>
           <p className="mt-4 text-base leading-relaxed text-charcoal/70">
-            Whether you are refreshing one room or rethinking how your whole home flows, the goal is always the same:
-            spaces with colour, comfort, and character that feel unmistakably yours.
+            With a love for timeless interiors, thoughtful details, and calm, welcoming spaces, I work closely with
+            clients to transform homes into places they love living in. Whether it&apos;s refreshing one room or
+            reimagining an entire home.
           </p>
           <p className="mt-4 text-base leading-relaxed text-charcoal/70">
-            Working with homeowners across Ireland, Céire provides personal guidance on colour, layout, finishes,
-            furniture, and styling — helping clients make confident, considered choices without the overwhelm.
+            Every project is unique, and I enjoy bringing each client&apos;s dream home to life.
+          </p>
+          <p className="mt-6 text-lg italic leading-relaxed text-charcoal/80" style={{ fontFamily: '"Cormorant Garamond", Georgia, serif' }}>
+            Your home should tell your story — and I&apos;d love to help you create a space that feels like you.
           </p>
           <div className="mt-8">
             <PrimaryButton to="/contact">Book A Consultation</PrimaryButton>
