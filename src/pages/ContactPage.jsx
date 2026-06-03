@@ -12,7 +12,8 @@ function ContactPage() {
   const handleSubmit = async (event) => {
     event.preventDefault();
 
-    const formData = new FormData(event.currentTarget);
+    const form = event.currentTarget;
+    const formData = new FormData(form);
     const payload = {
       name: formData.get("name"),
       email: formData.get("email"),
@@ -41,7 +42,7 @@ function ContactPage() {
         throw new Error(result.error || "Unable to send your inquiry.");
       }
 
-      event.currentTarget.reset();
+      form.reset();
       setStatus({
         type: "success",
         message: result.message || "Thank you. Your enquiry has been sent and we will be in touch shortly.",
