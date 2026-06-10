@@ -138,67 +138,6 @@ function HomePage() {
         </div>
       </Reveal>
 
-      <Reveal as="section" className="px-5 py-14 md:px-8 md:py-20 lg:py-24" delay={120} duration={880}>
-        <div className="mx-auto max-w-7xl">
-          <div className="mb-8 md:mb-10 flex flex-wrap items-end justify-between gap-4">
-            <div>
-              <p className="text-xs uppercase tracking-[0.24em] text-charcoal/44">Selected Portfolio</p>
-              <h2 className="mt-3 max-w-2xl text-4xl font-normal leading-[1.04] text-charcoal md:text-5xl">
-                A curated preview of completed interiors and refined transformations.
-              </h2>
-            </div>
-            <SecondaryButton to="/portfolio">View Full Portfolio</SecondaryButton>
-          </div>
-
-          <div className="grid gap-6 md:grid-cols-12 md:grid-rows-[26rem_16rem]">
-            <Link
-              to="/portfolio"
-              className="feature-card group relative overflow-hidden rounded-[1.5rem] md:col-span-8 md:row-span-2"
-            >
-              <CuratedImage
-                src="/whitebalcony.avif"
-                fallback="/livingroom1.jpeg"
-                alt="Calm white balcony interior with airy outdoor living and soft neutral styling"
-                className="feature-image absolute inset-0 h-full w-full object-cover focal-portfolio-main"
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/38 via-black/8 to-transparent" />
-              <div className="absolute bottom-0 left-0 p-6 md:p-8">
-                <p className="text-[0.66rem] font-semibold uppercase tracking-[0.2em] text-white/74">Signature Space</p>
-                <p className="mt-2 max-w-sm text-lg leading-relaxed text-white/88 md:text-xl">Calm outdoor living shaped through texture, tone, and light.</p>
-              </div>
-            </Link>
-
-            <article
-              className="rounded-[1.4rem] border border-charcoal/8 bg-white p-5 shadow-soft md:col-span-4 md:row-span-1 md:p-6"
-            >
-              <p className="text-[0.66rem] font-semibold uppercase tracking-[0.2em] text-charcoal/48">Editorial Detail</p>
-              <p className="mt-3 text-base leading-relaxed text-charcoal/68 md:text-[1.05rem]">
-                Material and textile layering shape the quieter moments in every scheme.
-              </p>
-            </article>
-
-            <Link
-              to="/portfolio"
-              className="feature-card group relative overflow-hidden rounded-[1.5rem] md:col-span-4 md:row-span-1"
-            >
-              <CuratedImage
-                src="/bluewallpaper.jpeg"
-                fallback="/naturalwallpaper.jpeg"
-                alt="Blue wallpaper detail showing layered finishes and refined material texture"
-                className="feature-image absolute inset-0 h-full w-full object-cover focal-portfolio-detail"
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/36 via-transparent to-transparent" />
-              <div className="absolute bottom-0 left-0 p-5 md:p-6">
-                <p className="text-[0.66rem] font-semibold uppercase tracking-[0.18em] text-white/74">Material Detail</p>
-                <p className="mt-2 max-w-[16rem] text-sm leading-relaxed text-white/84 md:text-[0.98rem]">
-                  Layered finishes and tactile pattern bring depth to a quieter palette.
-                </p>
-              </div>
-            </Link>
-          </div>
-        </div>
-      </Reveal>
-
       <Reveal as="section" className="px-5 py-14 md:px-8 md:py-20 lg:py-24" delay={160} duration={860}>
         <div className="mx-auto max-w-7xl rounded-[1.6rem] border border-charcoal/8 bg-white p-6 shadow-soft md:p-10">
           <div className="mb-8 md:mb-10">
@@ -251,7 +190,7 @@ function HomePage() {
             <div>
               <p className="text-xs uppercase tracking-[0.24em] text-charcoal/42">Consultation</p>
               <h2 className="mt-3 max-w-md text-4xl font-normal leading-[1.05] text-charcoal md:text-5xl">
-                Book a private consultation for your next interior chapter.
+                Book your Consultation
               </h2>
               <p className="mt-5 max-w-lg text-base leading-relaxed text-charcoal/66">
                 Share the rooms you want to transform and receive clear, beautifully considered direction on colour, finishes, furnishing, and flow.
