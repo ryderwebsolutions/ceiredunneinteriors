@@ -42,37 +42,64 @@ export const homepageFeatures = [
 
 export const featuredServices = [
   {
-    title: "Colour Consultancy & Wall Coverings",
-    text: "A guided palette and wall covering direction tailored to your lighting, finishes, and lifestyle.",
+    title: "In-Home Colour Consultation",
+    text: "Personalised colour recommendations for your walls, woodwork, and the way light moves through your home.",
   },
   {
-    title: "Design Consultation",
-    text: "Personal, room-specific design direction for layout, colour, soft furnishings, and accessories.",
+    title: "Room Design & Styling Package",
+    text: "A tailored design direction with colour, furnishing, lighting, and sourcing suggestions for your room.",
   },
   {
-    title: "Space Planning",
-    text: "Clear layout guidance to improve flow, comfort, and everyday function in your home.",
+    title: "New Builds & Renovations",
+    text: "Interior and colour advice to help you make confident decisions before decorating begins.",
   },
 ];
 
 export const services = [
   {
-    title: "Colour Consultancy & Wall Coverings",
-    detail:
-      "With so many colours and wall coverings to choose from, it can feel overwhelming. This is where a home colour consultation comes in. We look at your lighting from natural to artificial. I will bring paint swatches and wallpaper books.",
+    title: "In-Home Colour Consultation",
+    price: "€175 | 90 minutes, can be extended",
+    detail: "Perfect if you’re unsure which colours to choose or want a professional opinion before decorating.",
+    inclusions: [
+      "Personalised wall colour recommendations",
+      "Advice on ceilings, woodwork, doors, and skirting boards",
+      "Guidance on coordinating colours throughout your room",
+      "Consideration of natural light, existing furnishings, and flooring",
+    ],
+    image: "/newimage2.avif",
+    imageAlt: "Interior colour and furnishing inspiration",
     path: "/services/colour-consultancy-wall-coverings",
   },
   {
-    title: "Design Consultation",
-    detail:
-      "If you have just moved into your new home or simply want to refresh your space, this service is ideal if you do not know where to begin. We will help with room layout, colour, soft furnishings, and accessories. We offer a design board and shopping list. This design service will be tailored to your home’s needs.",
+    title: "Room Design & Styling Package",
+    price: "From €350 per room",
+    detail: "For those looking for more than colour advice, this service helps bring the whole room together.",
+    inclusions: [
+      "An initial consultation to discuss your ideas and requirements",
+      "Room measurements and photographs",
+      "A tailored design direction and colour scheme",
+      "Furniture, lighting, soft furnishing, and accessory suggestions",
+      "A personalised shopping and sourcing list",
+      "Sourcing of furniture and tradespeople",
+      "Advice on how to bring the overall look together",
+    ],
+    image: "/bedroom.avif",
+    imageAlt: "Bedroom styled with layered furnishings and a cohesive colour scheme",
     path: "/services/design-consultation",
   },
   {
-    title: "Space Planning",
+    title: "Colour & Interior Advice for New Builds and Renovations",
+    price: "Price on request",
     detail:
-      "Focused support to improve room flow, furniture positioning, and practical function while preserving a calm, cohesive aesthetic.",
-    path: "/services",
+      "Planning a renovation or moving into a new build? Make confident interior decorating decisions before work begins, with lighting considered as part of the plan.",
+    inclusions: [
+      "Colour and interior advice tailored to your home",
+      "Lighting considerations before decorating begins",
+      "Guidance to help your home reflect your personality and how you want to live",
+    ],
+    image: "/naturallightkitchen.jpg",
+    imageAlt: "Naturally lit kitchen with considered finishes",
+    path: "/contact",
   },
 ];
 

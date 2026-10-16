@@ -13,25 +13,25 @@ const kitchenAfterImage = "/KitchenAfter.jpeg";
 
 const servicePanels = [
   {
-    title: "Colour Consultancy & Wall Coverings",
+    title: "In-Home Colour Consultation",
     path: "/services/colour-consultancy-wall-coverings",
-    image: "/aestheticimage.jpeg",
+    image: "/newimage2.avif",
     fallback: "/colourpalette2.jpeg",
-    alt: "Curated colour consultation board with paint fan decks and samples",
+    alt: "Interior colour and furnishing inspiration",
   },
   {
-    title: "Design Consultation",
+    title: "Room Design & Styling Package",
     path: "/services/design-consultation",
     image: "/bedroom.avif",
     fallback: "/bedroom2.jpeg",
     alt: "Elegant bedroom interior styled in warm neutral layers",
   },
   {
-    title: "Space Planning",
+    title: "New Builds & Renovations",
     path: "/services",
-    image: "/livingroom3.jpeg",
+    image: "/naturallightkitchen.jpg",
     fallback: "/livingroom2.jpeg",
-    alt: "Interior layout with calm spatial flow and balanced arrangement",
+    alt: "Naturally lit kitchen with considered finishes",
   },
 ];
 

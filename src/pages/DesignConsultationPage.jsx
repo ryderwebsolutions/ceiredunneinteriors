@@ -10,16 +10,28 @@ function DesignConsultationPage() {
       <Reveal as="section" className="grid gap-8 md:grid-cols-[1.05fr_0.95fr] md:items-end" threshold={0.1}>
         <div>
           <p className="text-[0.68rem] font-semibold uppercase tracking-[0.26em] text-sage md:text-[0.72rem]">Service</p>
-          <h1 className="mt-4 text-[2.3rem] font-normal leading-[1.04] text-charcoal md:text-[3.35rem]">Design Consultation</h1>
+          <h1 className="mt-4 text-[2.3rem] font-normal leading-[1.04] text-charcoal md:text-[3.35rem]">
+            Room Design & Styling Package
+          </h1>
           <p className="mt-6 max-w-xl text-[1.02rem] leading-relaxed text-charcoal/72 md:text-[1.08rem]">
-            If you have just moved into your new home or simply want to refresh your space, this service is ideal if you do not know where to begin. We will help with room layout, colour, soft furnishings, and accessories. We offer a design board and shopping list. This design service will be tailored to your home’s needs.
+            For those looking for more than colour advice, this tailored service helps bring the whole room together.
           </p>
 
           <div className="mt-8 inline-flex rounded-2xl border border-walnut/12 bg-white/90 px-6 py-5 shadow-soft">
             <p className="text-[0.76rem] font-semibold uppercase tracking-[0.18em] text-charcoal/64">
-              Design package from €250
+              From €350 per room
             </p>
           </div>
+
+          <ul className="mt-7 list-disc space-y-2 pl-5 text-charcoal/76">
+            <li>An initial consultation to discuss your ideas and requirements</li>
+            <li>Room measurements and photographs</li>
+            <li>A tailored design direction and colour scheme</li>
+            <li>Furniture, lighting, soft furnishing, and accessory suggestions</li>
+            <li>A personalised shopping and sourcing list</li>
+            <li>Sourcing of furniture and tradespeople</li>
+            <li>Advice on how to bring the overall look together</li>
+          </ul>
 
           <div className="mt-8 flex flex-wrap gap-3">
             <PrimaryButton to="/contact">Book Consultation</PrimaryButton>

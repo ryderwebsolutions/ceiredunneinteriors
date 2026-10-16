@@ -138,9 +138,9 @@ function ContactPage() {
                 <option value="" disabled>
                   Select a service
                 </option>
-                <option>Colour Consultancy & Wall Coverings</option>
-                <option>Design Consultation</option>
-                <option>Space Planning</option>
+                <option>In-Home Colour Consultation</option>
+                <option>Room Design & Styling Package</option>
+                <option>Colour & Interior Advice for New Builds and Renovations</option>
               </select>
             </label>
 

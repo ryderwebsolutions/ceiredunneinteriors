@@ -1,7 +1,7 @@
 import Reveal from "../components/Reveal";
 import { PrimaryButton, SecondaryButton } from "../components/Buttons";
 
-const featureImage = "/naturalwallpaper.jpeg";
+const featureImage = "/newimage2.avif";
 const supportingImage = "/colour palette.jpeg";
 
 function ColourConsultancyPage() {
@@ -11,17 +11,25 @@ function ColourConsultancyPage() {
         <div>
           <p className="text-[0.68rem] font-semibold uppercase tracking-[0.26em] text-sage md:text-[0.72rem]">Service</p>
           <h1 className="mt-4 text-[2.3rem] font-normal leading-[1.04] text-charcoal md:text-[3.35rem]">
-            Colour Consultancy & Wall Coverings
+            In-Home Colour Consultation
           </h1>
           <p className="mt-6 max-w-xl text-[1.02rem] leading-relaxed text-charcoal/72 md:text-[1.08rem]">
-            With so many colours and wall coverings to choose from, it can feel overwhelming. This is where a home colour consultation comes in. We look at your lighting from natural to artificial. I will bring paint swatches and wallpaper books.
+            Perfect if you’re unsure which colours to choose or want a professional opinion before decorating. We’ll
+            consider the light, furnishings, and finishes already in your home.
           </p>
 
           <div className="mt-8 inline-flex rounded-2xl border border-walnut/12 bg-white/90 px-6 py-5 shadow-soft">
             <p className="text-[0.76rem] font-semibold uppercase tracking-[0.18em] text-charcoal/64">
-              90 minute site colour consultation — €190
+              €175 | 90 minutes, can be extended
             </p>
           </div>
+
+          <ul className="mt-7 list-disc space-y-2 pl-5 text-charcoal/76">
+            <li>Personalised wall colour recommendations</li>
+            <li>Advice on ceilings, woodwork, doors, and skirting boards</li>
+            <li>Guidance on coordinating colours throughout your room</li>
+            <li>Consideration of natural light, existing furnishings, and flooring</li>
+          </ul>
 
           <div className="mt-8 flex flex-wrap gap-3">
             <PrimaryButton to="/contact">Book Consultation</PrimaryButton>
